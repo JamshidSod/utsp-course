@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LEC19 · Analysing flow, capacity and congestion · Urban Transport Systems Planning and Design</title>
+<link rel="stylesheet" href="../static/site.css">
+</head>
+<body>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Show menu">
+<header class="topbar">
+<label for="nav-toggle" class="nav-button">Menu</label>
+<a class="brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+</header>
+<nav class="side" aria-label="Course">
+<a class="brand side-brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+<h2>Weeks</h2>
+<ul>
+<li><a href="../w01/index.html">Week 1 · Planning transport systems around objectives</a></li>
+<li><a href="../w02/index.html">Week 2 · Data and baseline analysis</a></li>
+<li><a href="../w03/index.html">Week 3 · Land use and transport justice</a></li>
+<li><a href="../w04/index.html">Week 4 · Multimodal network design</a></li>
+<li><a href="../w05/index.html">Week 5 · Demand forecasting and policy impacts</a></li>
+<li><a href="../w06/index.html">Week 6 · Public transport service design</a></li>
+<li><a href="../w07/index.html">Week 7 · Interchanges and allocation of street space</a></li>
+<li><a href="../w08/index.html">Week 8 · Safe walking and cycling networks</a></li>
+<li><a href="../w09/index.html">Week 9 · Infrastructure management and climate adaptation</a></li>
+<li><a href="../w10/index.html" class="current" aria-current="page">Week 10 · Traffic operations management</a></li>
+<li><span class="locked">Week 11 · Parking and urban logistics <small>opens 2026-11-16</small></span></li>
+<li><span class="locked">Week 12 · Governance and public participation <small>opens 2026-11-23</small></span></li>
+<li><span class="locked">Week 13 · Decarbonisation and emerging mobility services <small>opens 2026-11-30</small></span></li>
+<li><span class="locked">Week 14 · Appraisal and implementation <small>opens 2026-12-07</small></span></li>
+<li><span class="locked">Week 15 · Monitoring and evidence-based recommendations <small>opens 2026-12-14</small></span></li>
+</ul>
+<h2>Course documents</h2>
+<ul>
+<li><a href="../course/Course_project_brief.html">Course project brief</a></li>
+<li><a href="../course/Analytical_paper_brief.html">Analytical paper brief</a></li>
+<li><a href="../course/Marking_guides.html">Marking guides</a></li>
+</ul>
+</nav>
+<main>
+<header class="masthead"><p class="kicker"><a href="index.html#lectures">Week 10</a> · Lecture 1</p><h1>LEC19 · Analysing flow, capacity and congestion</h1></header>
+<div class="viewer" id="viewer">
+<div class="unit" data-unit>
+<section class="slide slide-title" id="s1" data-layout="title">
+<p class="kicker">Week 10 · Lecture 1</p>
+<h2>Analysing flow, capacity and congestion</h2>
+<p class="muted">LEC19 · Urban Transport Systems Planning and Design · TSTU · Prof. J. Sodikov</p>
+<p class="page">1 / 25</p>
+</section>
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s2" data-layout="section">
+<h2>What you will be able to do after today</h2>
+<ul><li>Explain the speed–flow–density relationship and read a fundamental diagram</li><li>Use shockwaves and cumulative curves to explain queues and delay</li><li>Find the bottleneck that actually limits a corridor</li><li>Judge vehicle capacity alongside the quality of service for people</li></ul><p class="page">2 / 25</p>
+</section>
+<div class="explain">This lecture is about how traffic behaves on a street from minute to minute. You will read a fundamental diagram, which links speed, flow and density. You will use shockwaves and cumulative curves to explain how queues and delay grow. You will also learn to find the bottleneck that really limits a corridor, and to judge capacity for people as well as for vehicles.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s3" data-layout="bullets">
+<h2>Where this sits: the traffic-operations perspective</h2>
+<ul><li>Traffic operations management is the fourth of the course&#39;s four design perspectives</li><li>Week 4 asked which links exist; Week 6 which services run; Week 9 how assets last</li><li>This week asks how the network performs minute by minute, and how control changes it</li><li>The open backbone: a published course on traffic flow theory and simulation, and Knoop&#39;s open textbook</li></ul>
+<p class="page">3 / 25</p>
+</section>
+<div class="explain">The course&#39;s technical methods look at one transport system from four perspectives, and traffic operations management is the fourth. Week 4 asked which links exist, Week 6 which services run and Week 9 how assets last. This week asks how the network performs over minutes and how signal control changes that. The open material comes from a published course on traffic flow theory and simulation and from Knoop&#39;s open textbook.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s4" data-layout="bullets">
+<h2>Three variables, one identity</h2>
+<ul><li>Flow q: vehicles passing a point per hour — what a counter measures</li><li>Density k: vehicles per kilometre of lane — what an aerial photo shows</li><li>Speed v: space-mean speed of the vehicles on the stretch</li><li>Identity: q = k · v holds for any stream in a stationary state</li><li>Detectors give time-mean speed; it is higher than space-mean speed — know which you have</li></ul>
+<p class="page">4 / 25</p>
+</section>
+<div class="explain">Three variables describe a traffic stream. Flow q is the number of vehicles passing a point per hour, and density k is the number of vehicles per kilometre of lane. Speed v is their average speed along the stretch. In a steady state they are linked by q = k · v. Detectors measure the average speed at one point, which is higher than the average along the stretch, so note which one your data give.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s5" data-layout="figure">
+<h2>The fundamental diagram</h2>
+<img src="../assets/w10_fundamental_diagram.png" alt="The fundamental diagram" loading="lazy">
+<p class="caption">Illustrative triangle: free speed 50 km/h, capacity 1,800 veh/h per lane, jam density 150 veh/km.</p><p class="page">5 / 25</p>
+</section>
+<div class="explain">The fundamental diagram shows how flow, density and speed relate for one lane. The figure uses an illustrative triangle: free speed 50 km/h, capacity 1,800 veh/h and jam density 150 veh/km. The flow–density panel is drawn first, and the speed–density and speed–flow panels follow from q = k · v. These values are for teaching only, not measurements from Tashkent.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s6" data-layout="bullets">
+<h2>Reading the fundamental diagram</h2>
+<ul><li>Left branch: free flow — more vehicles, more flow, speed stays high</li><li>Peak: capacity, reached at the critical density</li><li>Right branch: congestion — more vehicles, less flow, lower speed</li><li>The same flow can occur in two states: a count alone cannot tell you which</li><li>After a queue forms, discharge flow is often below capacity (capacity drop)</li></ul>
+<p class="page">6 / 25</p>
+</section>
+<div class="explain">On the left branch traffic flows freely: adding vehicles raises the flow while speed stays high. The peak is capacity, reached at the critical density. On the right branch the road is congested, so more vehicles give less flow and lower speed. The same flow can therefore occur in two different states, and a count alone cannot tell you which one you saw. Once a queue has formed, the outflow is often below capacity, which is called the capacity drop.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s7" data-layout="bullets">
+<h2>Worked example: how fast does a queue grow?</h2>
+<ul><li>Shockwave speed between two states: w = (q₂ − q₁) / (k₂ − k₁)</li><li>Arrivals: q₁ = 900 veh/h at k₁ = 18 veh/km; stopped queue: q₂ = 0 at k₂ = 150 veh/km</li><li>w = (0 − 900) / (150 − 18) ≈ −6.8 km/h: the back of the queue moves upstream</li><li>That is about 1.9 m every second of red</li><li>When green starts, a second wave runs upstream and releases the queue</li></ul>
+<p class="page">7 / 25</p>
+</section>
+<div class="explain">A shockwave is the boundary between two traffic states, such as free arrivals and a stopped queue. Its speed is the change in flow divided by the change in density, w = (q₂ − q₁) / (k₂ − k₁). With 900 veh/h arriving at 18 veh/km and a stopped queue at 150 veh/km, w ≈ −6.8 km/h. The minus sign means the back of the queue moves upstream, by about 1.9 m every second of red.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s8" data-layout="figure">
+<h2>Shockwaves at a signal</h2>
+<img src="../assets/w10_shockwave.png" alt="Shockwaves at a signal" loading="lazy">
+<p class="caption">Illustrative trajectories: 900 veh/h arrive, 40 s red, then green; queue stops where the two waves meet.</p><p class="page">8 / 25</p>
+</section>
+<div class="explain">Each thin line in the figure is one vehicle moving through time towards the stop line. During the 40 s red, the stopping wave carries the back of the queue upstream. When green starts, a second wave runs upstream from the stop line and releases the queued vehicles. The queue reaches its greatest length where the two waves meet.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s9" data-layout="bullets">
+<h2>Bottlenecks</h2>
+<ul><li>A bottleneck is where capacity falls: lane drop, merge, junction, bus stop in the lane, parked cars</li><li>Upstream: queue and congested state; downstream: free flow at the bottleneck&#39;s discharge rate</li><li>Only the active bottleneck limits throughput — widening elsewhere changes nothing</li><li>In cities the bottlenecks are almost always junctions and kerbside activity</li><li>Fixing one bottleneck can move the queue to the next one</li></ul>
+<p class="page">9 / 25</p>
+</section>
+<div class="explain">A bottleneck is a place where capacity falls, such as a lane drop, a merge, a junction, a bus stop in the lane or parked cars. Upstream of it traffic queues, and downstream it flows freely at the rate the bottleneck lets through. Only the active bottleneck limits the corridor, so widening the road anywhere else changes nothing. In cities the bottlenecks are almost always junctions and kerbside activity, and fixing one can move the queue to the next.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s10" data-layout="figure">
+<h2>Demand above capacity: queue and delay</h2>
+<img src="../assets/w10_cumulative_curves.png" alt="Demand above capacity: queue and delay" loading="lazy">
+<p class="caption">Illustrative: 2,200 veh/h for one hour, then 1,200 veh/h, against a capacity of 1,800 veh/h.</p><p class="page">10 / 25</p>
+</section>
+<div class="explain">The figure plots cumulative curves: the total number of vehicles that have arrived and that have left, against time. For one hour, 2,200 veh/h arrive, but only 1,800 veh/h can leave, so the two curves separate. The vertical gap between them is the queue, and the horizontal gap is the delay of one vehicle. The shaded area between the curves is the total delay of all vehicles.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s11" data-layout="bullets">
+<h2>Worked example: demand-to-capacity ratio</h2>
+<ul><li>Demand 2,200 veh/h against capacity 1,800 veh/h: d/c = 1.22 for one hour</li><li>Queue grows by 400 vehicles per hour; after the peak it shrinks at 600 veh/h</li><li>The queue clears 40 minutes after the peak ends</li><li>Total delay = triangle area: ½ × 400 veh × 100 min = 20,000 veh·min</li><li>A 10% demand cut removes far more than 10% of the delay</li></ul>
+<p class="page">11 / 25</p>
+</section>
+<div class="explain">Demand of 2,200 veh/h against a capacity of 1,800 veh/h gives a demand-to-capacity ratio of 1.22 for one hour. The queue grows by 400 vehicles in that hour, and afterwards it shrinks at 600 veh/h, so it clears 40 minutes after the peak. Total delay is the area of the triangle, ½ × 400 vehicles × 100 minutes = 20,000 vehicle-minutes. A 10% cut in demand removes much more than 10% of this delay, which is why demand management (Week 5) matters.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s12" data-layout="bullets">
+<h2>Capacity at a signalised junction</h2>
+<ul><li>Saturation flow s: discharge rate of a queue during green, per lane</li><li>Capacity of a lane group: c = s × g / C (green time g, cycle C)</li><li>Degree of saturation: x = q / c — as x approaches 1, queues become unstable</li><li>Saturation flow is measured, not assumed: a published course assignment counts discharge headways</li><li>Lane width, buses, turning vehicles and pedestrians all lower s</li></ul>
+<p class="page">12 / 25</p>
+</section>
+<div class="explain">Saturation flow s is the rate at which a queue leaves the stop line during green, per lane. A lane group only has green for part of the cycle, so its capacity is c = s × g / C. The degree of saturation x = q / c compares demand with that capacity, and queues become unstable as x approaches 1. Saturation flow should be measured in the field, not assumed. Lane width, buses, turning vehicles and pedestrians all lower it.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s13" data-layout="bullets">
+<h2>Worked example: measuring saturation flow</h2>
+<ul><li>At the start of green, note the time each car crosses the stop line</li><li>Ignore the first four vehicles: they are still accelerating</li><li>Average headway of the rest, for example 2.0 s</li><li>s = 3,600 / 2.0 = 1,800 vehicles per hour of green, per lane</li><li>Repeat over at least five cycles and report the range, not one value</li></ul>
+<p class="page">13 / 25</p>
+</section>
+<div class="explain">This worked example shows how to measure saturation flow at a real junction. At the start of green, record the time each car crosses the stop line, but ignore the first four cars because they are still speeding up. If the rest average a 2.0 s headway, s = 3,600 / 2.0 = 1,800 vehicles per hour of green per lane. Repeat over at least five cycles and report the range, not a single value.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s14" data-layout="table">
+<h2>Vehicle capacity is not the whole story</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Question</th><th>Vehicle view</th><th>Multimodal view</th></tr></thead>
+<tbody>
+<tr><td>Capacity</td><td>Vehicles per hour</td><td>People per hour, by mode</td></tr>
+<tr><td>Delay</td><td>Seconds per vehicle</td><td>Seconds per person: passengers and pedestrians</td></tr>
+<tr><td>Quality</td><td>Level of service letter from vehicle delay</td><td>Bus reliability, crossing waits, comfort, safety</td></tr>
+<tr><td>Success</td><td>Lower degree of saturation</td><td>Objectives of Week 1: access, safety, emissions</td></tr>
+</tbody></table></div>
+<p class="page">14 / 25</p>
+</section>
+<div class="explain">The table compares a vehicle view of junction performance with a multimodal view. The vehicle view counts vehicles per hour, delay per vehicle and a level-of-service letter. The multimodal view counts people per hour by mode, delay per person for passengers and pedestrians, and bus reliability, crossing waits, comfort and safety. Success then means the Week 1 objectives of access, safety and emissions, not only a lower degree of saturation. In LAB10 you report both views.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s15" data-layout="section">
+<h2>Tashkent: what we know about traffic operations</h2>
+<ul><li>OpenStreetMap signal data, the city&#39;s targets, and TSTU research</li></ul><p class="page">15 / 25</p>
+</section>
+<div class="explain">The second part of the lecture turns to Tashkent. It uses traffic-signal data from OpenStreetMap, the city&#39;s transport targets and research from TSTU.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s16" data-layout="figure">
+<h2>Traffic signals in OpenStreetMap</h2>
+<img src="../assets/w10_signals_map.png" alt="Traffic signals in OpenStreetMap" loading="lazy">
+<p class="caption">1,867 signal nodes city-wide; 1,799 in the twelve study districts (OSM extract, October 2026).</p><p class="page">16 / 25</p>
+</section>
+<div class="explain">The map shows how densely traffic signals are mapped in each study district of Tashkent. OpenStreetMap holds 1,867 signal nodes in the city, of which 1,799 lie in the twelve study districts. A darker district has more signal nodes per km². The star marks the junction used in LAB10.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s17" data-layout="bullets">
+<h2>Reading the signal map</h2>
+<ul><li>Densest: Mirobod, 10.7 per km²; sparsest: Bektemir, 0.67 per km²</li><li>One junction carries several nodes: merged within 60 m they form 729 clusters</li><li>OSM records signal positions, not phases, timings or detectors</li><li>TSTU built a GIS inventory of Tashkent&#39;s signals (Sodikov et al., 2016) — the start of a signal register</li></ul>
+<p class="page">17 / 25</p>
+</section>
+<div class="explain">Mirobod has the densest signal mapping, at 10.7 nodes per km², and Bektemir the sparsest, at 0.67 per km². One junction often carries several signal nodes, so the lab merges nodes within 60 m of each other, which gives 729 clusters. OpenStreetMap records only where signals stand, not their phases, timings or detectors. TSTU built a GIS inventory of Tashkent&#39;s signals in 2016, which could start a city register of signals.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s18" data-layout="bullets">
+<h2>Targets that pull in different directions</h2>
+<ul><li>Tashkent transport concept for 2022–2025: junction vehicle capacity +15%</li><li>Same concept: average bus operating speed +17%</li><li>Same concept: public transport share 43%</li><li>No pedestrian target (Pulatova, 2024)</li><li>One junction cannot maximise all of them — the timing plan chooses</li></ul>
+<p class="page">18 / 25</p>
+</section>
+<div class="explain">Tashkent&#39;s transport concept for 2022–2025 sets several targets at once. It aims to raise junction vehicle capacity by 15%, raise average bus operating speed by 17% and reach a 43% public transport share. Pulatova (2024) notes that it sets no target for pedestrians. One junction cannot reach every target, so the timing plan decides which users come first.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s19" data-layout="bullets">
+<h2>Pedestrians at Tashkent junctions</h2>
+<ul><li>64.2% of surveyed pedestrians say they wait a long time to cross</li><li>21% say the time given to cross is not enough</li><li>Speed limit lowered from 70 to 60 km/h — still lethal at uncontrolled crossings</li><li>Long waits push people to cross on red: delay is also a safety problem</li></ul>
+<p class="page">19 / 25</p>
+</section>
+<div class="explain">In Pulatova&#39;s survey, 64.2% of pedestrians say they wait a long time to cross, and 21% say the time given to cross is not enough. The thesis does not report the sample size. The city speed limit was lowered from 70 to 60 km/h, which is still lethal at crossings without signals. Long waits push people to cross on red, so pedestrian delay is also a safety problem.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s20" data-layout="bullets">
+<h2>At the city edge: the M-41 corridor</h2>
+<ul><li>Entry corridors mix intercity, commuter and freight traffic</li><li>Sodikov et al. evaluated the M-41 traffic pattern and safety with mixed methods</li><li>Lesson: read traffic data and safety evidence together, not in separate reports</li><li>Operations analysis that ignores safety optimises the wrong thing</li></ul>
+<p class="page">20 / 25</p>
+</section>
+<div class="explain">Entry roads at the city edge carry intercity, commuter and freight traffic together. Sodikov and colleagues studied the traffic pattern and safety of the M-41 corridor with mixed methods. Their lesson is to read traffic data and safety evidence together, not in separate reports. An analysis of operations that leaves out safety can optimise the wrong goal.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s21" data-layout="bullets">
+<h2>Data you will need to collect</h2>
+<ul><li>No open traffic counts or signal timings exist for Tashkent</li><li>Classified counts by approach in 15-minute periods, including buses</li><li>Cycle and green times by stopwatch over several cycles</li><li>Queue length at the end of red; pedestrian counts at each crosswalk</li><li>Record date, time, weather and observer — Week 2 data-quality rules</li></ul>
+<p class="page">21 / 25</p>
+</section>
+<div class="explain">No open traffic counts or signal timings were found for Tashkent, so you must collect your own. Count vehicles by type and approach in quarter-hour periods, and include buses. Time the cycle and the greens with a stopwatch over several cycles, and note the queue at the end of red and the pedestrians at each crosswalk. Record the date, time, weather and observer, as in Week 2, and observe only from safe points.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s22" data-layout="question">
+<h2>Discussion</h2>
+<blockquote class="question">At your corridor&#39;s busiest junction, is the bottleneck the signal, the kerbside, or the junction downstream — and how would you prove it?</blockquote>
+<ul><li>Two minutes in pairs: name one observation that would settle it.</li></ul><p class="page">22 / 25</p>
+</section>
+<div class="explain">This question asks you to find what really limits your corridor&#39;s busiest junction: the signal, the kerbside or the next junction downstream. Look for something you can observe, such as where the queue starts and where free flow resumes. One clear observation can settle the question.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s23" data-layout="takeaways">
+<h2>Key takeaways</h2>
+<ul><li>q = k · v: a count alone cannot tell free flow from congestion</li><li>Queues grow and clear as waves; delay rises much faster than demand</li><li>Only the active bottleneck limits throughput — find it before designing</li><li>Report capacity and delay for people, not only for vehicles</li></ul>
+<p class="page">23 / 25</p>
+</section>
+<div class="explain">A count alone cannot tell free flow from congestion, because the same flow occurs in two states. Queues grow and clear as waves, and delay rises much faster than demand. Only the active bottleneck limits throughput, so find it before you design. Report capacity and delay for people, not only for vehicles.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s24" data-layout="references">
+<h2>References</h2>
+<ul><li>TU Delft, Department of Transport &amp; Planning. CIEM6250 Transport Systems Design — units B-1 Network Design, B-2 Service Design, B-3 Physical Infrastructure Management, B-4 Traffic Operations Management (Smart Public Transport Lab education page; MSc Civil Engineering TTE track). https://www.tudelft.nl/citg/over-faculteit/afdelingen/transport-planning/research/labs/smart-public-transport-lab/education</li><li>TU Delft (2014). CIE4821 Traffic Flow Theory and Simulation. TU Delft OpenCourseWare. https://ocw.tudelft.nl/courses/traffic-flow-theory-simulation/</li><li>Knoop, V. L. (2021). Traffic Flow Theory: An Introduction with Exercises (3rd ed.). TU Delft OPEN Publishing. https://books.open.tudelft.nl/home/catalog/book/203</li><li>Salvucci, F. (2016). 1.252J/11.540J Urban Transportation Planning, Fall 2016. MIT OpenCourseWare. https://ocw.mit.edu/courses/1-252j-urban-transportation-planning-fall-2016/</li><li>Urbanik, T., et al. (2015). Signal Timing Manual (2nd ed.), NCHRP Report 812. Transportation Research Board. https://www.nap.edu/read/22097/chapter/2</li><li>Kittelson &amp; Associates et al. (2013). Transit Capacity and Quality of Service Manual (3rd ed.), TCRP Report 165. Transportation Research Board. https://nap.nationalacademies.org/read/24766</li><li>Wilson, N., Sánchez-Martínez, G., &amp; Nassir, N. (2017). 1.258J/11.541J Public Transportation Systems, Spring 2017. MIT OpenCourseWare. https://ocw.mit.edu/courses/1-258j-public-transportation-systems-spring-2017/</li><li>Global Designing Cities Initiative &amp; NACTO (2016). Global Street Design Guide. Island Press. https://globaldesigningcities.org/publication/global-street-design-guide/</li><li>OpenStreetMap contributors (2026). Uzbekistan extract, Geofabrik GmbH (download.geofabrik.de). https://download.geofabrik.de/asia/uzbekistan.html</li><li>Sodikov, J. I., et al. (2016). GIS inventory of traffic signals on Tashkent streets (in Russian). Transport Systems of Siberia.</li><li>Pulatova, Z. S. (2024). Walkability assessment of Tashkent city districts (PhD dissertation, in Uzbek; supervisor J. I. Sodikov). Tashkent State Transport University.</li><li>Sodikov, J. I., et al. (2026). Traffic pattern and safety evaluation on the M-41 corridor using mixed-methods analysis. AIP Conference Proceedings (2025 Int. Conf.).</li></ul>
+<p class="page">24 / 25</p>
+</section>
+</div>
+<div class="unit" data-unit>
+<section class="slide slide-title" id="s25" data-layout="licence">
+<p class="muted">© 2026 TSTU, J. Sodikov. CC BY-NC-SA 4.0. Adapts openly licensed material (CC BY-NC-SA 4.0) listed in the references.</p>
+<p class="page">25 / 25</p>
+</section>
+</div>
+<nav class="controls" aria-label="Slides"><button type="button" id="prev">&larr; Previous</button><span id="pos"></span><button type="button" id="next">Next &rarr;</button></nav>
+</div>
+<p class="meta"><a href="files/LEC19.pptx" download>Download slides (.pptx)</a></p>
+<footer>CC BY-NC-SA 4.0 · TSTU</footer>
+</main>
+<script src="../static/slides.js" defer></script></body>
+</html>

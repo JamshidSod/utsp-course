@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Week 6: Public transport service design · Urban Transport Systems Planning and Design</title>
+<link rel="stylesheet" href="../static/site.css">
+</head>
+<body>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Show menu">
+<header class="topbar">
+<label for="nav-toggle" class="nav-button">Menu</label>
+<a class="brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+</header>
+<nav class="side" aria-label="Course">
+<a class="brand side-brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+<h2>Weeks</h2>
+<ul>
+<li><a href="../w01/index.html">Week 1 · Planning transport systems around objectives</a></li>
+<li><a href="../w02/index.html">Week 2 · Data and baseline analysis</a></li>
+<li><a href="../w03/index.html">Week 3 · Land use and transport justice</a></li>
+<li><a href="../w04/index.html">Week 4 · Multimodal network design</a></li>
+<li><a href="../w05/index.html">Week 5 · Demand forecasting and policy impacts</a></li>
+<li><a href="../w06/index.html" class="current" aria-current="page">Week 6 · Public transport service design</a></li>
+<li><a href="../w07/index.html">Week 7 · Interchanges and allocation of street space</a></li>
+<li><a href="../w08/index.html">Week 8 · Safe walking and cycling networks</a></li>
+<li><a href="../w09/index.html">Week 9 · Infrastructure management and climate adaptation</a></li>
+<li><a href="../w10/index.html">Week 10 · Traffic operations management</a></li>
+<li><span class="locked">Week 11 · Parking and urban logistics <small>opens 2026-11-16</small></span></li>
+<li><span class="locked">Week 12 · Governance and public participation <small>opens 2026-11-23</small></span></li>
+<li><span class="locked">Week 13 · Decarbonisation and emerging mobility services <small>opens 2026-11-30</small></span></li>
+<li><span class="locked">Week 14 · Appraisal and implementation <small>opens 2026-12-07</small></span></li>
+<li><span class="locked">Week 15 · Monitoring and evidence-based recommendations <small>opens 2026-12-14</small></span></li>
+</ul>
+<h2>Course documents</h2>
+<ul>
+<li><a href="../course/Course_project_brief.html">Course project brief</a></li>
+<li><a href="../course/Analytical_paper_brief.html">Analytical paper brief</a></li>
+<li><a href="../course/Marking_guides.html">Marking guides</a></li>
+</ul>
+</nav>
+<main>
+<header class="masthead"><p class="kicker">Week 6 · released 2026-10-12</p><h1>Week 6: Public transport service design</h1></header>
+<nav class="tabs" aria-label="Week sections">
+<a href="#lectures">Lectures</a><a href="#practical">Practical</a><a href="#lab">Lab</a><a href="#reading">Reading</a>
+</nav>
+
+<section id="lectures" class="tab">
+<h2>Lectures</h2>
+<div class="lecture">
+<h3><a href="LEC11.html">LEC11 · Route and service structures</a></h3>
+<p class="meta">24 slides · <a href="LEC11.html">View slides</a> · <a href="files/LEC11.pptx" download>Download slides (.pptx)</a></p>
+</div>
+<div class="lecture">
+<h3><a href="LEC12.html">LEC12 · Service quality and street priority</a></h3>
+<p class="meta">24 slides · <a href="LEC12.html">View slides</a> · <a href="files/LEC12.pptx" download>Download slides (.pptx)</a></p>
+</div>
+</section>
+
+<section id="practical" class="tab">
+<h2>Practical</h2>
+<p class="meta"><a href="files/P06_practical.docx" download>Download handout (.docx)</a></p>
+<header class="masthead"><p class="kicker">Week 6 · Practical P6 · 2 hours</p><h2>Headways, departures and fleet for your corridor&#39;s bus service</h2></header>
+<h3>Objective</h3>
+<p>Calculate service headways, departures and fleet requirements from the passenger demand of your corridor, compare service alternatives and select one for course-project Stage 2 (LO4).</p>
+<h3>Tasks</h3>
+<h4>Task 1. Collect the route inputs</h4>
+<p>For the bus route(s) on your corridor, take the route length and number of stops from LAB06_bus_routes.gpkg (layer bus_routes). Take the horizon-year peak-hour passengers at the busiest point from your P5 results (or from your Stage 1 counts grown to the horizon year). State the running speed and time per stop you assume and where they come from (an on-board stopwatch survey is best).</p>
+<p><strong>Deliverable: </strong>Input table with status (MEASURED / SOURCED / ASSUMPTION) for every value</p>
+<h4>Task 2. Frequency, headway and departures</h4>
+<p>Compute the demand frequency f = peak load ÷ (vehicle capacity × load factor) and compare it with a policy minimum (for example 4 buses per hour). Use the higher value. Headway h = 60 ÷ f. Round to a timetable-friendly headway and list the departures from 07:00 to 09:00.</p>
+<p><strong>Deliverable: </strong>Frequency, headway and the departure list for the morning peak</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Quantity</th><th>Formula</th><th>Your value</th></tr></thead>
+<tbody>
+<tr><td>Demand frequency (buses/h)</td><td>peak load ÷ (capacity × load factor)</td><td></td></tr>
+<tr><td>Policy frequency (buses/h)</td><td>60 ÷ policy headway</td><td></td></tr>
+<tr><td>Design frequency</td><td>higher of the two</td><td></td></tr>
+<tr><td>Headway (min)</td><td>60 ÷ design frequency</td><td></td></tr>
+<tr><td>Departures 07:00–09:00</td><td>2 × design frequency</td><td></td></tr>
+</tbody>
+</table></div>
+<h4>Task 3. Cycle time and fleet</h4>
+<p>Running time = length ÷ speed × 60 + stops × time per stop ÷ 60 (minutes). Cycle time C = 2 × running time × (1 + layover share). Fleet N = C ÷ h rounded up; operated headway = C ÷ N. Worked example (LAB6, route 8): 17.84 km, 29 stops, 950 passengers/h → C = 170.1 min, h = 4.29 min, N = 40 buses.</p>
+<p><strong>Deliverable: </strong>Cycle time, fleet and operated headway</p>
+<h4>Task 4. Three service alternatives</h4>
+<p>Repeat the calculation for (A) today&#39;s routes with more frequency, (B) a restructured trunk on the shared section with feeders, and (C) the same routes with bus lanes and junction priority. For B, add the transfer: count how many passengers must change and add half the feeder headway to their wait.</p>
+<p><strong>Deliverable: </strong>Comparison table: fleet, headway, expected wait, transfers, capacity in passengers per hour</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Alternative</th><th>Fleet</th><th>Headway (min)</th><th>Expected wait (min)</th><th>Transfers</th><th>Capacity (pass/h)</th></tr></thead>
+<tbody>
+<tr><td>A Frequency only</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>B Trunk + feeders</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C Priority</td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table></div>
+<h4>Task 5. Select and justify</h4>
+<p>Select one alternative for Stage 2. Justify it against passenger waiting time, resources (fleet), reliability and street-space needs. Name the group that loses (for example drivers losing a lane, passengers who now transfer).</p>
+<p><strong>Deliverable: </strong>Half-page justification, included in course-project Stage 2</p>
+<h3>Materials</h3>
+<ul>
+<li>LAB06_bus_routes.gpkg and LAB06_service_design_synthetic.xlsx</li>
+<li>P5 scenario results</li>
+<li>Calculator or Excel</li>
+<li>Stage 1 counts of buses and passengers on your corridor</li>
+</ul>
+<h3>Assessment</h3>
+<p>Continuous assessment (LO4): correct and traceable calculations, sensible rounding to whole buses and timetable headways, and a selection justified against both passenger and operator criteria.</p>
+
+</section>
+
+<section id="lab" class="tab">
+<h2>Lab</h2>
+<p class="meta"><a href="files/LAB06_lab.docx" download>Download handout (.docx)</a></p>
+<header class="masthead"><p class="kicker">Week 6 · Laboratory LAB6 · 2 hours · QGIS, Excel (QGIS 3.40 LTR or newer)</p><h2>Cycle time, waiting time and passenger capacity with a bus-priority scenario</h2></header>
+<h3>Objective</h3>
+<p>Measure Tashkent&#39;s bus routes in GIS (length, stops, spacing, overlap, coverage) and use a spreadsheet model to calculate cycle time, fleet, waiting time and passenger capacity, then compare the effect of a bus-priority measure (LO2, LO4).</p>
+<h3>Data</h3>
+<p class="banner">SYNTHETIC — generated for teaching: LAB06_service_design_synthetic.xlsx. These files imitate realistic Tashkent conditions but are not observations; the README sheet records the method and random seed.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>File</th><th>Description</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>LAB06_bus_routes.gpkg</td><td>Layers: bus_routes (125 OSM relations with length, stops, spacing), route_stops (stop members in order), stop_spacing_segments, route_overlap (route numbers per OSM way), bus_stops, metro_stations, districts (12 study districts)</td><td>© OpenStreetMap contributors (ODbL)</td></tr>
+<tr><td>LAB06_route_stops_osm.csv</td><td>Stop and platform members of each bus route relation in relation order, with coordinates (WGS 84 lon/lat), extracted from the Geofabrik .pbf</td><td>© OpenStreetMap contributors (ODbL)</td></tr>
+<tr><td>LAB06_service_design_synthetic.xlsx</td><td>Sheets: README, Inputs (operating and priority parameters), Routes (OSM lengths and stops), Service_design (60 route numbers: SYNTHETIC peak loads, cycle time, fleet, headway, wait, capacity, priority scenario), Coverage (area within 500 m; Kontur check), Stop_catchment (Pulatova eqs 2.3–2.4)</td><td>© OpenStreetMap contributors (ODbL); Pulatova (2024); Kontur Population (2023); Synthetic teaching data</td></tr>
+</tbody>
+</table></div>
+<p>All GIS layers use EPSG:32642 (WGS 84 / UTM zone 42N). Set the QGIS project CRS to EPSG:32642 before starting.</p>
+<h3>Steps</h3>
+<h4>Step 1. Set up the project</h4>
+<ol>
+<li>Project &gt; Properties &gt; CRS: set EPSG:32642 (WGS 84 / UTM zone 42N)</li>
+<li>Layer &gt; Add Layer &gt; Add Vector Layer: open LAB06_bus_routes.gpkg and add all layers</li>
+<li>Open the attribute table of bus_routes; sort by ref and look at routes 13Т, 17T and 9Т</li>
+</ol>
+<p><strong>Check: </strong>bus_routes has 125 features; districts has 12; write one sentence on the inconsistent route refs</p>
+<h4>Step 2. Route length and stops</h4>
+<ol>
+<li>Open the Field Calculator on bus_routes: new field len_qgis = $length / 1000 (decimal)</li>
+<li>View &gt; Statistical Summary on length_km and on n_stops (filter n_stops &gt;= 2)</li>
+</ol>
+<p><strong>Check: </strong>len_qgis matches length_km to within 0.1 km (QGIS may measure on the ellipsoid); median length 18.6 km; 117 relations have stops; median 34 stops</p>
+<h4>Step 3. Stop spacing from the stop sequences</h4>
+<ol>
+<li>Processing Toolbox &gt; Vector creation &gt; Points to path: input route_stops, order field seq, group field rel_osm_id</li>
+<li>Processing Toolbox &gt; Vector geometry &gt; Explode lines on the result; add field spacing = $length</li>
+<li>Select by Expression spacing &gt; 3000 and inspect those gaps on the map; then compare with stop_spacing_segments</li>
+</ol>
+<p><strong>Check: </strong>Two gaps over 3 km (missing stop members); median spacing of the rest = 458 m; 14% of segments are under 300 m</p>
+<h4>Step 4. Overlapping routes</h4>
+<ol>
+<li>Style route_overlap with Graduated symbology on n_routes (Natural Breaks), line width by class</li>
+<li>Select by Expression n_routes &gt;= 10 and read the refs field of the selected ways</li>
+</ol>
+<p><strong>Check: </strong>Maximum 18 route numbers on one way; ways with 10 or more routes total 5.0 km</p>
+<h4>Step 5. Walking coverage of stops</h4>
+<ol>
+<li>Vector geometry &gt; Buffer bus_stops, distance 500 m, Dissolve = yes; then Vector overlay &gt; Clip with districts</li>
+<li>Add field area = $area to the clipped layer and divide by the districts&#39; total area</li>
+<li>Repeat with metro_stations; compare with the Coverage sheet; read the Kontur column F and cell F16</li>
+</ol>
+<p><strong>Check: </strong>Share of area within 500 m: bus stops 0.713, metro 0.079; Kontur places 76% of modelled population in three outer districts</p>
+<h4>Step 6. Trace one route in the spreadsheet</h4>
+<ol>
+<li>Open LAB06_service_design_synthetic.xlsx; read the README (SYNTHETIC banner) and the Inputs sheet</li>
+<li>Service_design: find route 8; click E to M and read each formula</li>
+<li>Recalculate route 8 by hand with the P6 formulas</li>
+</ol>
+<p><strong>Check: </strong>Route 8: cycle time 170.1 min, fleet 40 buses, operated headway 4.25 min, capacity offered 1,129 places per hour</p>
+<h4>Step 7. Compare the priority measure</h4>
+<ol>
+<li>Read columns N–R for route 8 and the totals below the table</li>
+<li>Make a clustered column chart (Insert &gt; Chart) of total fleet and mean wait, baseline vs priority</li>
+</ol>
+<p><strong>Check: </strong>Route 8 priority cycle 142.1 min; total fleet 1,549 → 1,294 buses; mean wait 5.82 → 4.01 min with today&#39;s fleet</p>
+<h4>Step 8. Sensitivity of the priority result</h4>
+<ol>
+<li>On Inputs, change the bus-lane share (B9) to 0.25 and 0.75; record total fleet and mean wait each time</li>
+<li>Return it to 0.5; change the mixed-traffic running speed (B5) from 18 to 15 km/h and record the baseline fleet</li>
+</ol>
+<p><strong>Check: </strong>A table of four runs with one sentence: which assumption changes the fleet most?</p>
+<h4>Step 9. Your corridor route</h4>
+<ol>
+<li>Copy the route 8 row to a new row; enter your corridor route&#39;s length and stops (from bus_routes) and your P5 peak load</li>
+<li>Stop_catchment sheet: enter your observed mean headway and compare the catchment with the SNiP 500 m norm</li>
+</ol>
+<p><strong>Check: </strong>Fleet and headway for your route in both scenarios, ready for P6 and Stage 2</p>
+<h3>Expected results</h3>
+<p>Compare your values with these. Small differences (±2%) can come from rounding or tool versions; explain larger ones in your limitations.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Quantity</th><th>Expected value</th></tr></thead>
+<tbody>
+<tr><td>bus route relations</td><td>125</td></tr>
+<tr><td>distinct route refs</td><td>67</td></tr>
+<tr><td>median route length km</td><td>18.6</td></tr>
+<tr><td>relations with stop members</td><td>117</td></tr>
+<tr><td>median stops per route</td><td>34.0</td></tr>
+<tr><td>median stop spacing m</td><td>458</td></tr>
+<tr><td>share spacing under 300m</td><td>0.14</td></tr>
+<tr><td>suspect gaps over 3km</td><td>2</td></tr>
+<tr><td>max routes on one way</td><td>18</td></tr>
+<tr><td>trunk corridor km 10plus routes</td><td>5.0</td></tr>
+<tr><td>area share within 500m bus stop</td><td>0.713</td></tr>
+<tr><td>area share within 500m metro</td><td>0.079</td></tr>
+<tr><td>kontur share three peripheral districts</td><td>0.76</td></tr>
+<tr><td>service routes</td><td>60</td></tr>
+<tr><td>total fleet baseline</td><td>1549</td></tr>
+<tr><td>total fleet priority</td><td>1294</td></tr>
+<tr><td>mean wait baseline min</td><td>5.82</td></tr>
+<tr><td>mean wait priority same fleet min</td><td>4.01</td></tr>
+<tr><td>route8 cycle time min</td><td>170.1</td></tr>
+<tr><td>route8 fleet</td><td>40</td></tr>
+<tr><td>route8 headway min</td><td>4.25</td></tr>
+<tr><td>route8 priority cycle time min</td><td>142.1</td></tr>
+<tr><td>route8 capacity offered pass h</td><td>1129</td></tr>
+<tr><td>longest service route ref</td><td>16</td></tr>
+<tr><td>pulatova rmin 10min headway m</td><td>488.2</td></tr>
+</tbody>
+</table></div>
+<h3>Submission checklist</h3>
+<ul>
+<li>Map of route overlap with metro stations (PNG or PDF, legend and source)</li>
+<li>Stop-spacing statistics with the two suspect gaps explained</li>
+<li>Coverage result (area within 500 m) and a short note on why population was not used</li>
+<li>Workbook with the priority comparison chart, the four sensitivity runs and your corridor route row</li>
+<li>Half a page of limitations: synthetic loads, assumed speeds, straight-line spacing and catchments, OSM completeness</li>
+<li>Input data, method, results and limitations are all included (syllabus §6).</li>
+</ul>
+
+<h3>Data files</h3>
+<ul class="downloads">
+<li><a href="files/LAB06_data/LAB06_bus_routes.gpkg" download>LAB06_bus_routes.gpkg</a> <small>4.5 MB</small></li>
+<li><a href="files/LAB06_data/LAB06_route_stops_osm.csv" download>LAB06_route_stops_osm.csv</a> <small>0.4 MB</small></li>
+<li><a href="files/LAB06_data/LAB06_service_design_synthetic.xlsx" download>LAB06_service_design_synthetic.xlsx</a> <small>0.0 MB</small></li>
+</ul>
+</section>
+
+<section id="reading" class="tab">
+<h2>Reading</h2>
+<p class="meta"><a href="files/W06_reading.docx" download>Download reading list (.docx)</a></p>
+<header class="masthead"><p class="kicker">Week 6 · Independent study</p><h2>Week 6: Public transport service design</h2></header>
+<h3>Required reading</h3>
+<ul>
+<li>Wilson, N., Sánchez-Martínez, G., &amp; Nassir, N. (2017). 1.258J/11.541J Public Transportation Systems, Spring 2017. MIT OpenCourseWare. — Lecture notes 11 (single-route design), 12 (frequency determination) and 15 (networks and route structure). https://ocw.mit.edu/courses/1-258j-public-transportation-systems-spring-2017/</li>
+<li>Walker, J. (2008). Purpose-driven public transport: creating a clear conversation about public transport goals. Journal of Transport Geography, 16(6), 436–442. — Full article (ridership versus coverage goals). https://ses.library.usyd.edu.au/handle/2123/6057</li>
+<li>Kittelson &amp; Associates et al. (2013). Transit Capacity and Quality of Service Manual (3rd ed.), TCRP Report 165. Transportation Research Board. — Chapters on quality-of-service methods and on bus transit capacity (stops, lanes and corridors). https://nap.nationalacademies.org/read/24766</li>
+</ul>
+<h3>Optional reading</h3>
+<ul>
+<li>Wilson, N., Sánchez-Martínez, G., &amp; Nassir, N. (2017). 1.258J/11.541J Public Transportation Systems, Spring 2017. MIT OpenCourseWare. — Lecture notes 6 (modal capacities), 16 (corridor strategies), 19 (signal priority) and 20 (service reliability); homework set 1. https://ocw.mit.edu/courses/1-258j-public-transportation-systems-spring-2017/</li>
+<li>van Nes, R. Designing public transport networks / Public transport service networks: design of urban and regional networks. TU Delft research portal. — Designing public transport networks: line spacing, stop spacing and frequency trade-offs. https://research.tudelft.nl/en/publications/designing-public-transport-networks/</li>
+<li>ITDP — Institute for Transportation and Development Policy. The BRT Planning Guide (4th ed.). New York: ITDP. — Parts on service planning and corridor design. https://brtguide.itdp.org/</li>
+<li>Pulatova, Z. S. (2024). Walkability assessment of Tashkent city districts (PhD dissertation, in Uzbek; supervisor J. I. Sodikov). Tashkent State Transport University. — pp.25 (concept targets) and 30–31 (stop-access norm, catchment formula).</li>
+</ul>
+<h3>Independent-study hours</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>Reading</th><th>Analytical paper</th><th>Practical &amp; project preparation</th><th>Total</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>2</td><td>3</td><td>8</td></tr>
+</tbody>
+</table></div>
+<h3>Preparation tasks</h3>
+<ul>
+<li>Finish LAB6 steps 8–9 if not completed in class</li>
+<li>Analytical paper: choose your decision topic (for example bus lanes and street-space reallocation) and list two alternatives</li>
+<li>Count buses per hour on your corridor in the morning peak and note headway irregularity</li>
+</ul>
+<h3>Course project</h3>
+<p>Stage 2 due this week: network and service alternatives. Submit the P4 network alternatives, the P5 scenario table and assumption register, and the P6 service calculation with the selected alternative.</p>
+
+</section>
+<footer>CC BY-NC-SA 4.0 · TSTU</footer>
+</main>
+<script src="../static/tabs.js" defer></script></body>
+</html>

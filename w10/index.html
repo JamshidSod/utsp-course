@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Week 10: Traffic operations management · Urban Transport Systems Planning and Design</title>
+<link rel="stylesheet" href="../static/site.css">
+</head>
+<body>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Show menu">
+<header class="topbar">
+<label for="nav-toggle" class="nav-button">Menu</label>
+<a class="brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+</header>
+<nav class="side" aria-label="Course">
+<a class="brand side-brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+<h2>Weeks</h2>
+<ul>
+<li><a href="../w01/index.html">Week 1 · Planning transport systems around objectives</a></li>
+<li><a href="../w02/index.html">Week 2 · Data and baseline analysis</a></li>
+<li><a href="../w03/index.html">Week 3 · Land use and transport justice</a></li>
+<li><a href="../w04/index.html">Week 4 · Multimodal network design</a></li>
+<li><a href="../w05/index.html">Week 5 · Demand forecasting and policy impacts</a></li>
+<li><a href="../w06/index.html">Week 6 · Public transport service design</a></li>
+<li><a href="../w07/index.html">Week 7 · Interchanges and allocation of street space</a></li>
+<li><a href="../w08/index.html">Week 8 · Safe walking and cycling networks</a></li>
+<li><a href="../w09/index.html">Week 9 · Infrastructure management and climate adaptation</a></li>
+<li><a href="../w10/index.html" class="current" aria-current="page">Week 10 · Traffic operations management</a></li>
+<li><span class="locked">Week 11 · Parking and urban logistics <small>opens 2026-11-16</small></span></li>
+<li><span class="locked">Week 12 · Governance and public participation <small>opens 2026-11-23</small></span></li>
+<li><span class="locked">Week 13 · Decarbonisation and emerging mobility services <small>opens 2026-11-30</small></span></li>
+<li><span class="locked">Week 14 · Appraisal and implementation <small>opens 2026-12-07</small></span></li>
+<li><span class="locked">Week 15 · Monitoring and evidence-based recommendations <small>opens 2026-12-14</small></span></li>
+</ul>
+<h2>Course documents</h2>
+<ul>
+<li><a href="../course/Course_project_brief.html">Course project brief</a></li>
+<li><a href="../course/Analytical_paper_brief.html">Analytical paper brief</a></li>
+<li><a href="../course/Marking_guides.html">Marking guides</a></li>
+</ul>
+</nav>
+<main>
+<header class="masthead"><p class="kicker">Week 10 · released 2026-11-09</p><h1>Week 10: Traffic operations management</h1></header>
+<nav class="tabs" aria-label="Week sections">
+<a href="#lectures">Lectures</a><a href="#practical">Practical</a><a href="#lab">Lab</a><a href="#reading">Reading</a>
+</nav>
+
+<section id="lectures" class="tab">
+<h2>Lectures</h2>
+<div class="lecture">
+<h3><a href="LEC19.html">LEC19 · Analysing flow, capacity and congestion</a></h3>
+<p class="meta">25 slides · <a href="LEC19.html">View slides</a> · <a href="files/LEC19.pptx" download>Download slides (.pptx)</a></p>
+</div>
+<div class="lecture">
+<h3><a href="LEC20.html">LEC20 · Managing junction and network performance</a></h3>
+<p class="meta">26 slides · <a href="LEC20.html">View slides</a> · <a href="files/LEC20.pptx" download>Download slides (.pptx)</a></p>
+</div>
+</section>
+
+<section id="practical" class="tab">
+<h2>Practical</h2>
+<p class="meta"><a href="files/P10_practical.docx" download>Download handout (.docx)</a></p>
+<header class="masthead"><p class="kicker">Week 10 · Practical P10 · 2 hours</p><h2>Capacity, queues and delay at your corridor junction</h2></header>
+<h3>Objective</h3>
+<p>Calculate capacity, queues and delay for the baseline and for proposed junction-control alternatives at one signalised junction or crossing of your project corridor, reporting vehicle, passenger and pedestrian delay separately (LO4, LO6).</p>
+<h3>Tasks</h3>
+<h4>Task 1. Describe the junction</h4>
+<p>Choose the busiest signalised junction (or a crossing you plan to signalise) on your corridor. Draw a plan sketch with approaches, lanes per approach, crosswalks, stops and the phase sequence. Use OSM (LAB10_junction.gpkg or tashkent_base.gpkg) and your Week 7 cross-sections; measure crossing lengths kerb to kerb in QGIS (View &gt; Measure &gt; Measure Line).</p>
+<p><strong>Deliverable: </strong>Annotated junction sketch with lanes, phases and crossing lengths</p>
+<h4>Task 2. Collect or estimate the inputs</h4>
+<p>From your own field count (or the LAB10 values if you could not count), record for each approach: cars and buses per hour, estimated bus occupancy, cycle and green times from at least five stopwatch cycles, queue length at the end of red, and pedestrians per hour on each crosswalk. Measure saturation headways for one lane, as in a published course assignment: ignore the first four vehicles. Mark every value as observed or assumed.</p>
+<p><strong>Deliverable: </strong>Input table with observed/assumed flag for every value</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Approach</th><th>Lanes</th><th>Cars (veh/h)</th><th>Buses (bus/h)</th><th>Green g (s)</th><th>Queue at end of red (veh)</th><th>Observed or assumed</th></tr></thead>
+<tbody>
+<tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table></div>
+<h4>Task 3. Baseline capacity and degree of saturation</h4>
+<p>For each lane group compute flow in pcu/h (bus = 2 pcu), saturation flow (lanes × s), capacity c = s × g / C and degree of saturation x = q / c. Flag any lane group with x above 0.85.</p>
+<p><strong>Deliverable: </strong>Baseline capacity table</p>
+<h4>Task 4. Baseline queues and delay</h4>
+<p>Compute Webster average delay for each lane group and the queue at the end of red (q × red time per lane). Compare the predicted queue with your observed queue; if they differ by more than a few vehicles, adjust saturation flow and explain.</p>
+<p><strong>Deliverable: </strong>Delay and queue table with a model-versus-observation comparison</p>
+<h4>Task 5. Two control alternatives</h4>
+<p>Alternative A: operational change only (retiming with Webster&#39;s cycle and pedestrian minimum greens, or a turn ban). Alternative B: a geometric or priority change (bus lane, median refuge, queue jump, or active bus priority). Recalculate cycle, greens, x, delay and queues for both. Use the LAB10 workbook structure if you wish — copy a sheet and change the inputs.</p>
+<p><strong>Deliverable: </strong>Calculation sheets for alternatives A and B</p>
+<h4>Task 6. Compare and decide</h4>
+<p>Fill the comparison table below for the baseline and both alternatives. Write five sentences: who gains, who loses, which result depends most on an assumption, and which alternative you carry into Stage 3 of the course project.</p>
+<p><strong>Deliverable: </strong>Comparison table and short justification</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Indicator</th><th>Baseline</th><th>Alternative A</th><th>Alternative B</th></tr></thead>
+<tbody>
+<tr><td>Cycle length (s)</td><td></td><td></td><td></td></tr>
+<tr><td>Average vehicle delay (s/veh)</td><td></td><td></td><td></td></tr>
+<tr><td>Average passenger delay (s/person)</td><td></td><td></td><td></td></tr>
+<tr><td>Average pedestrian delay (s/ped)</td><td></td><td></td><td></td></tr>
+<tr><td>Maximum degree of saturation</td><td></td><td></td><td></td></tr>
+<tr><td>Longest queue (m)</td><td></td><td></td><td></td></tr>
+</tbody>
+</table></div>
+<h3>Materials</h3>
+<ul>
+<li>Field count sheets and stopwatch (or phone timer)</li>
+<li>LAB10_junction.gpkg and LAB10_synthetic_junction.xlsx</li>
+<li>QGIS and Excel</li>
+<li>Week 7 cross-sections of your corridor</li>
+</ul>
+<h3>Assessment</h3>
+<p>Continuous assessment (LO4, LO6): correct capacity, queue and delay calculations; honest separation of observed and assumed inputs; vehicle, passenger and pedestrian delay reported separately; a justified choice for Stage 3.</p>
+
+</section>
+
+<section id="lab" class="tab">
+<h2>Lab</h2>
+<p class="meta"><a href="files/LAB10_lab.docx" download>Download handout (.docx)</a></p>
+<header class="masthead"><p class="kicker">Week 10 · Laboratory LAB10 · 2 hours · QGIS, Excel (QGIS 3.40 LTR or newer)</p><h2>Comparing junction-control alternatives</h2></header>
+<h3>Objective</h3>
+<p>Compare a baseline signal timing with three junction-control alternatives at a real Tashkent junction using a spreadsheet model, report vehicle delay and passenger delay separately, test sensitivity, and map the city&#39;s signal inventory in QGIS (LO4, LO6).</p>
+<h3>Data</h3>
+<p class="banner">SYNTHETIC — generated for teaching: LAB10_synthetic_junction.xlsx. These files imitate realistic Tashkent conditions but are not observations; the README sheet records the method and random seed.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>File</th><th>Description</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>LAB10_junction.gpkg</td><td>Layers: districts (12 study districts), traffic_signals (1,867 OSM nodes), major_roads, roads_site_500m, junction_site (Shahrisabz St × Istiqbol St), junction_approaches (M1, M2, S1, S2 with compass labels and the synthetic flows)</td><td>© OpenStreetMap contributors (ODbL)</td></tr>
+<tr><td>LAB10_synthetic_junction.xlsx</td><td>SYNTHETIC flows, occupancies, pedestrian flows and existing timing (Inputs sheet, yellow cells); sheets Baseline, Alt1_Retimed, Alt2_BusLane, Alt3_BusLane_Refuge with live Webster formulas; Summary with chart</td><td>Synthetic teaching data; Webster (1958)</td></tr>
+</tbody>
+</table></div>
+<p>All GIS layers use EPSG:32642 (WGS 84 / UTM zone 42N). Set the QGIS project CRS to EPSG:32642 before starting.</p>
+<h3>Steps</h3>
+<h4>Step 1. Set up the project</h4>
+<ol>
+<li>Project &gt; Properties &gt; CRS: set EPSG:32642 (WGS 84 / UTM zone 42N)</li>
+<li>Layer &gt; Add Layer &gt; Add Vector Layer: open LAB10_junction.gpkg and add all layers</li>
+<li>Style traffic_signals as small red dots and districts with no fill</li>
+</ol>
+<p><strong>Check: </strong>12 district polygons; traffic_signals has 1,867 features</p>
+<h4>Step 2. Signal inventory by district</h4>
+<ol>
+<li>Processing Toolbox &gt; Vector analysis &gt; Count points in polygon: polygons = districts, points = traffic_signals, count field NUMPOINTS</li>
+<li>Open the attribute table, Field Calculator: new field per_km2 = &#34;NUMPOINTS&#34; / &#34;area_km2&#34; (decimal)</li>
+<li>Symbology &gt; Graduated on per_km2; sort the attribute table by per_km2</li>
+</ol>
+<p><strong>Check: </strong>Total NUMPOINTS = 1,799; Mirobod is densest (≈10.7 per km²) and Bektemir sparsest (≈0.67 per km²)</p>
+<h4>Step 3. Nodes are not junctions</h4>
+<ol>
+<li>Vector geometry &gt; Buffer: input traffic_signals, distance 30 m, Dissolve result = yes</li>
+<li>Vector geometry &gt; Multipart to singleparts on the buffer output</li>
+<li>Count the features; zoom to three clusters and check that each is one junction</li>
+</ol>
+<p><strong>Check: </strong>729 clusters; write one sentence on why 1,867 nodes overstate the number of signalised junctions</p>
+<h4>Step 4. The study junction</h4>
+<ol>
+<li>Right-click junction_site &gt; Zoom to Layer; label junction_approaches with approach and compass</li>
+<li>View &gt; Measure &gt; Measure Line: measure kerb-to-kerb crossing length of Shahrisabz St and of Istiqbol St on a satellite basemap (XYZ Tiles) or the OSM road widths</li>
+<li>Select by Location: traffic_signals within 500 m of junction_site (buffer it first with Vector geometry &gt; Buffer, 500 m)</li>
+</ol>
+<p><strong>Check: </strong>24 signal nodes within 500 m; your crossing lengths compared with the workbook values (24 m and 14 m) — note the difference</p>
+<h4>Step 5. Read the baseline model</h4>
+<ol>
+<li>Open LAB10_synthetic_junction.xlsx; read the README (SYNTHETIC data, method, formulas)</li>
+<li>On the Baseline sheet click M2 and use Formulas &gt; Trace Precedents to follow the Webster delay formula</li>
+<li>Check columns G–L by hand for approach M1: flow, saturation flow, y, g, λ and x</li>
+</ol>
+<p><strong>Check: </strong>Baseline cycle 120 s; average vehicle delay 19.2 s/veh; maximum degree of saturation 0.62</p>
+<h4>Step 6. Retime the junction (Alt 1)</h4>
+<ol>
+<li>On Alt1_Retimed, read the timing block below the lane groups: critical y, Y, L, Webster C0, pedestrian minimum greens</li>
+<li>Explain in two sentences why the cycle used (80 s) is twice Webster&#39;s C0</li>
+</ol>
+<p><strong>Check: </strong>C0 = 39.5 s; cycle needed for pedestrians = 78.6 s; cycle used 80 s; vehicle delay 14.3 s/veh</p>
+<h4>Step 7. Vehicle delay and passenger delay separately</h4>
+<ol>
+<li>Go to Summary and read the chart: per vehicle, per occupant, per pedestrian</li>
+<li>Rank the four alternatives twice: by average vehicle delay and by average occupant delay</li>
+<li>Copy the Summary table into your report and write which ranking you would show the city, and why</li>
+</ol>
+<p><strong>Check: </strong>Vehicle delay 19.2 / 14.3 / 18.9 / 15.1 s; occupant delay 18.4 / 13.7 / 15.0 / 11.8 s; Alt 1 ranks first by vehicles, Alt 3 by passengers</p>
+<h4>Step 8. Sensitivity to bus occupancy (Goal Seek)</h4>
+<ol>
+<li>In Summary!G4 type =D4-C4 (Alt 2 minus Alt 1 occupant delay)</li>
+<li>Data &gt; What-If Analysis &gt; Goal Seek: Set cell G4, To value 0, By changing Inputs!B5 (bus occupancy)</li>
+<li>Record the break-even occupancy; repeat with =E4-C4 for Alt 3; restore Inputs!B5 to 55</li>
+</ol>
+<p><strong>Check: </strong>Break-even ≈ 120.2 passengers per bus for Alt 2 and ≈ 10.8 for Alt 3</p>
+<h4>Step 9. Sensitivity to walking speed</h4>
+<ol>
+<li>Set Inputs!B8 (pedestrian crossing speed) to 1.0 m/s for older pedestrians; read Alt1_Retimed again</li>
+<li>Restore 1.2 m/s afterwards</li>
+</ol>
+<p><strong>Check: </strong>Alt 1 cycle rises to 90 s and vehicle delay to 15.5 s/veh</p>
+<h3>Expected results</h3>
+<p>Compare your values with these. Small differences (±2%) can come from rounding or tool versions; explain larger ones in your limitations.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Quantity</th><th>Expected value</th></tr></thead>
+<tbody>
+<tr><td>signals city</td><td>1867</td></tr>
+<tr><td>signals study districts</td><td>1799</td></tr>
+<tr><td>signals within 500m of junction</td><td>24</td></tr>
+<tr><td>signal clusters 60m</td><td>729</td></tr>
+<tr><td>densest district</td><td>Mirobod</td></tr>
+<tr><td>densest signals per km2</td><td>10.69</td></tr>
+<tr><td>sparsest district</td><td>Bektemir</td></tr>
+<tr><td>sparsest signals per km2</td><td>0.67</td></tr>
+<tr><td>baseline cycle s</td><td>120</td></tr>
+<tr><td>baseline vehicle delay s</td><td>19.2</td></tr>
+<tr><td>baseline occupant delay s</td><td>18.4</td></tr>
+<tr><td>baseline bus delay s</td><td>17.5</td></tr>
+<tr><td>baseline pedestrian delay s</td><td>19.4</td></tr>
+<tr><td>baseline max x</td><td>0.62</td></tr>
+<tr><td>alt1 cycle s</td><td>80</td></tr>
+<tr><td>alt1 vehicle delay s</td><td>14.3</td></tr>
+<tr><td>alt1 occupant delay s</td><td>13.7</td></tr>
+<tr><td>alt1 bus delay s</td><td>13.2</td></tr>
+<tr><td>alt1 pedestrian delay s</td><td>13.5</td></tr>
+<tr><td>alt1 max x</td><td>0.63</td></tr>
+<tr><td>alt2 cycle s</td><td>100</td></tr>
+<tr><td>alt2 vehicle delay s</td><td>18.9</td></tr>
+<tr><td>alt2 occupant delay s</td><td>15.0</td></tr>
+<tr><td>alt2 bus delay s</td><td>11.1</td></tr>
+<tr><td>alt2 pedestrian delay s</td><td>18.2</td></tr>
+<tr><td>alt2 max x</td><td>0.78</td></tr>
+<tr><td>alt3 cycle s</td><td>65</td></tr>
+<tr><td>alt3 vehicle delay s</td><td>15.1</td></tr>
+<tr><td>alt3 occupant delay s</td><td>11.8</td></tr>
+<tr><td>alt3 bus delay s</td><td>8.4</td></tr>
+<tr><td>alt3 pedestrian delay s</td><td>12.5</td></tr>
+<tr><td>alt3 max x</td><td>0.82</td></tr>
+<tr><td>alt1 webster c0 s</td><td>39.5</td></tr>
+<tr><td>alt1 pedestrian cycle s</td><td>78.6</td></tr>
+<tr><td>alt1 cycle s if walk 1 0 m s</td><td>90</td></tr>
+<tr><td>alt1 vehicle delay s if walk 1 0 m s</td><td>15.5</td></tr>
+<tr><td>breakeven bus occupancy alt2 vs alt1</td><td>120.2</td></tr>
+<tr><td>breakeven bus occupancy alt3 vs alt1</td><td>10.8</td></tr>
+</tbody>
+</table></div>
+<h3>Submission checklist</h3>
+<ul>
+<li>District signal-density map (PNG or PDF, with legend, source and date)</li>
+<li>Cluster count with a one-sentence explanation of nodes versus junctions</li>
+<li>Summary table and chart from the workbook, with vehicle, passenger and pedestrian delay in separate columns</li>
+<li>Break-even occupancies and the walking-speed test, with two sentences on robustness</li>
+<li>Half a page of limitations: synthetic flows, Webster assumptions, two-phase simplification, crossing lengths</li>
+<li>Input data, method, results and limitations are all included (syllabus §6).</li>
+</ul>
+
+<h3>Data files</h3>
+<ul class="downloads">
+<li><a href="files/LAB10_data/LAB10_junction.gpkg" download>LAB10_junction.gpkg</a> <small>2.5 MB</small></li>
+<li><a href="files/LAB10_data/LAB10_synthetic_junction.xlsx" download>LAB10_synthetic_junction.xlsx</a> <small>0.0 MB</small></li>
+</ul>
+</section>
+
+<section id="reading" class="tab">
+<h2>Reading</h2>
+<p class="meta"><a href="files/W10_reading.docx" download>Download reading list (.docx)</a></p>
+<header class="masthead"><p class="kicker">Week 10 · Independent study</p><h2>Week 10: Traffic operations management</h2></header>
+<h3>Required reading</h3>
+<ul>
+<li>Knoop, V. L. (2021). Traffic Flow Theory: An Introduction with Exercises (3rd ed.). TU Delft OPEN Publishing. — Chapters on traffic flow variables, the fundamental diagram and shockwave theory, with their exercises. https://books.open.tudelft.nl/home/catalog/book/203</li>
+<li>Urbanik, T., et al. (2015). Signal Timing Manual (2nd ed.), NCHRP Report 812. Transportation Research Board. — Chapters on signal timing parameters (cycle length, splits, pedestrian timing) and coordination. https://www.nap.edu/read/22097/chapter/2</li>
+<li>Wilson, N., Sánchez-Martínez, G., &amp; Nassir, N. (2017). 1.258J/11.541J Public Transportation Systems, Spring 2017. MIT OpenCourseWare. — Lecture 19 notes: Transit signal priority (Furth). https://ocw.mit.edu/courses/1-258j-public-transportation-systems-spring-2017/</li>
+</ul>
+<h3>Optional reading</h3>
+<ul>
+<li>TU Delft (2014). CIE4821 Traffic Flow Theory and Simulation. TU Delft OpenCourseWare. — Bottlenecks and shockwaves lectures; past exams with answers. https://ocw.tudelft.nl/courses/traffic-flow-theory-simulation/</li>
+<li>Salvucci, F. (2016). 1.252J/11.540J Urban Transportation Planning, Fall 2016. MIT OpenCourseWare. — Assignment 1: Counting and observing at key intersections. https://ocw.mit.edu/courses/1-252j-urban-transportation-planning-fall-2016/</li>
+<li>Kittelson &amp; Associates et al. (2013). Transit Capacity and Quality of Service Manual (3rd ed.), TCRP Report 165. Transportation Research Board. — Chapters on bus preferential treatments and pedestrian quality of service. https://nap.nationalacademies.org/read/24766</li>
+<li>Sodikov, J. I., et al. (2016). GIS inventory of traffic signals on Tashkent streets (in Russian). Transport Systems of Siberia. — Full article (GIS inventory of traffic signals on Tashkent streets).</li>
+</ul>
+<h3>Independent-study hours</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>Reading</th><th>Analytical paper</th><th>Practical &amp; project preparation</th><th>Total</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>2</td><td>3</td><td>8</td></tr>
+</tbody>
+</table></div>
+<h3>Preparation tasks</h3>
+<ul>
+<li>Finish LAB10 steps 7–9 if not completed in class</li>
+<li>Complete the P10 comparison table for your corridor junction</li>
+<li>Analytical paper: draft the section comparing your two alternatives</li>
+</ul>
+<h3>Course project</h3>
+<p>Stage 3 (due this week, Week 10): street design and operational calculations. Submit your Week 7 cross-sections, the P10 junction calculations (baseline and two alternatives, with vehicle, passenger and pedestrian delay) and an outline of your parking or loading solution (developed fully in Week 11).</p>
+
+</section>
+<footer>CC BY-NC-SA 4.0 · TSTU</footer>
+</main>
+<script src="../static/tabs.js" defer></script></body>
+</html>

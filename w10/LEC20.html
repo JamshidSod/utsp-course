@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LEC20 · Managing junction and network performance · Urban Transport Systems Planning and Design</title>
+<link rel="stylesheet" href="../static/site.css">
+</head>
+<body>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Show menu">
+<header class="topbar">
+<label for="nav-toggle" class="nav-button">Menu</label>
+<a class="brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+</header>
+<nav class="side" aria-label="Course">
+<a class="brand side-brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+<h2>Weeks</h2>
+<ul>
+<li><a href="../w01/index.html">Week 1 · Planning transport systems around objectives</a></li>
+<li><a href="../w02/index.html">Week 2 · Data and baseline analysis</a></li>
+<li><a href="../w03/index.html">Week 3 · Land use and transport justice</a></li>
+<li><a href="../w04/index.html">Week 4 · Multimodal network design</a></li>
+<li><a href="../w05/index.html">Week 5 · Demand forecasting and policy impacts</a></li>
+<li><a href="../w06/index.html">Week 6 · Public transport service design</a></li>
+<li><a href="../w07/index.html">Week 7 · Interchanges and allocation of street space</a></li>
+<li><a href="../w08/index.html">Week 8 · Safe walking and cycling networks</a></li>
+<li><a href="../w09/index.html">Week 9 · Infrastructure management and climate adaptation</a></li>
+<li><a href="../w10/index.html" class="current" aria-current="page">Week 10 · Traffic operations management</a></li>
+<li><span class="locked">Week 11 · Parking and urban logistics <small>opens 2026-11-16</small></span></li>
+<li><span class="locked">Week 12 · Governance and public participation <small>opens 2026-11-23</small></span></li>
+<li><span class="locked">Week 13 · Decarbonisation and emerging mobility services <small>opens 2026-11-30</small></span></li>
+<li><span class="locked">Week 14 · Appraisal and implementation <small>opens 2026-12-07</small></span></li>
+<li><span class="locked">Week 15 · Monitoring and evidence-based recommendations <small>opens 2026-12-14</small></span></li>
+</ul>
+<h2>Course documents</h2>
+<ul>
+<li><a href="../course/Course_project_brief.html">Course project brief</a></li>
+<li><a href="../course/Analytical_paper_brief.html">Analytical paper brief</a></li>
+<li><a href="../course/Marking_guides.html">Marking guides</a></li>
+</ul>
+</nav>
+<main>
+<header class="masthead"><p class="kicker"><a href="index.html#lectures">Week 10</a> · Lecture 2</p><h1>LEC20 · Managing junction and network performance</h1></header>
+<div class="viewer" id="viewer">
+<div class="unit" data-unit>
+<section class="slide slide-title" id="s1" data-layout="title">
+<p class="kicker">Week 10 · Lecture 2</p>
+<h2>Managing junction and network performance</h2>
+<p class="muted">LEC20 · Urban Transport Systems Planning and Design · TSTU · Prof. J. Sodikov</p>
+<p class="page">1 / 26</p>
+</section>
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s2" data-layout="section">
+<h2>What you will be able to do after today</h2>
+<ul><li>Calculate a two-phase signal timing with Webster&#39;s method</li><li>Include pedestrian crossing time and public transport priority in the timing</li><li>Compare geometric and operational measures by who gains and who pays</li><li>Check a model against observations and report its uncertainty</li></ul><p class="page">2 / 26</p>
+</section>
+<div class="explain">This lecture turns traffic theory into signal design. You will calculate a two-phase signal timing with Webster&#39;s method and add pedestrian crossing time and public transport priority. You will compare geometric and operational measures by who gains and who pays. Finally, you will check a model against observations and report how uncertain its results are.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s3" data-layout="bullets">
+<h2>Signal-control vocabulary</h2>
+<ul><li>Phase: a set of movements that receive green together</li><li>Cycle C: time for one full sequence of phases</li><li>Split: share of the cycle given to each phase as effective green g</li><li>Intergreen and lost time L: amber and all-red plus start-up losses</li><li>Offset: start of green relative to the neighbouring junction</li></ul>
+<p class="page">3 / 26</p>
+</section>
+<div class="explain">A phase is a set of movements that receive green together, and the cycle C is the time for one full sequence of phases. The split is the share of the cycle that each phase gets as effective green g. Intergreen is the amber and all-red time between phases, and lost time L adds the start-up losses. The offset is when green starts compared with the neighbouring junction.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s4" data-layout="figure">
+<h2>A two-phase timing plan</h2>
+<img src="../assets/w10_phase_timeline.png" alt="A two-phase timing plan" loading="lazy">
+<p class="caption">Synthetic LAB10 junction, Alt 1: 80 s cycle. Pedestrians cross each street while the parallel traffic has green.</p><p class="page">4 / 26</p>
+</section>
+<div class="explain">The figure shows the Alt 1 timing plan of the synthetic LAB10 junction, with an 80 s cycle. The top two rows are the two traffic phases, Shahrisabz and then Istiqbol. The bottom two rows are the pedestrian signals: people cross each street while the traffic parallel to it has green. So people can cross Shahrisabz only during the Istiqbol phase.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s5" data-layout="bullets">
+<h2>Webster&#39;s method</h2>
+<ul><li>Flow ratio y = q / s for each lane group; the critical y per phase governs</li><li>Y = sum of critical flow ratios; must stay below 1</li><li>Optimum cycle C₀ = (1.5 L + 5) / (1 − Y)</li><li>Effective greens in proportion to the critical y values</li><li>Average delay d = 0.9 [C(1−λ)² / 2(1−λx) + x² / 2q(1−x)], λ = g/C</li></ul>
+<p class="page">5 / 26</p>
+</section>
+<div class="explain">Webster&#39;s method sets a cycle from the flows. For each lane group the flow ratio is y = q / s, and the largest y in each phase is the critical one. Their sum Y must stay below 1, and the optimum cycle is C₀ = (1.5 L + 5) / (1 − Y). Greens are shared in proportion to the critical y values. In the delay formula the second term grows very fast as x approaches 1.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s6" data-layout="bullets">
+<h2>Worked example: the LAB10 junction</h2>
+<ul><li>Shahrisabz: (1,800 cars + 50 buses × 2 pcu) / (3 lanes × 1,800) = 0.35</li><li>Istiqbol: (760 cars + 12 buses × 2) / (2 × 1,800) = 0.22</li><li>Y = 0.57, L = 8 s → C₀ = (12 + 5) / 0.43 = 39.5 s</li><li>Pedestrians crossing 24 m at 1.2 m/s need 7 + 20 = 27 s of green</li><li>That needs a 78.6 s cycle → round up to 80 s</li></ul>
+<p class="page">6 / 26</p>
+</section>
+<div class="explain">On Shahrisabz St, 1,800 cars plus 50 buses, at 2 passenger-car units (pcu) each, share three lanes of 1,800 pcu/h, so y = 0.35. On Istiqbol St, y = 0.22, so Y = 0.57, and with L = 8 s, C₀ = 39.5 s. But pedestrians crossing 24 m of Shahrisabz at 1.2 m/s need 7 + 20 = 27 s of green. Istiqbol has the smaller flow ratio and so the smaller green, which pushes the cycle up to 78.6 s, rounded up to 80 s. All these inputs are synthetic.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s7" data-layout="figure">
+<h2>Cycle length: who pays for a long cycle?</h2>
+<img src="../assets/w10_delay_vs_cycle.png" alt="Cycle length: who pays for a long cycle?" loading="lazy">
+<p class="caption">Synthetic junction: above the pedestrian minimum cycle, vehicle and pedestrian delay both rise with cycle length; the existing 120 s cycle costs everyone.</p><p class="page">7 / 26</p>
+</section>
+<div class="explain">The figure plots average vehicle and pedestrian delay against cycle length for the synthetic LAB10 junction. The shaded band marks cycles too short to give pedestrians their minimum green, so they are not allowed, whatever Webster&#39;s formula gives. Beyond that band, both curves rise as the cycle gets longer. The existing 120 s cycle therefore makes both drivers and pedestrians wait longer than an 80 s cycle.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s8" data-layout="bullets">
+<h2>Designing for pedestrians at signals</h2>
+<ul><li>Minimum green = walk time + crossing length ÷ walking speed</li><li>Use a slower design speed where older people and children cross</li><li>A median refuge splits a wide crossing into two shorter stages</li><li>Leading pedestrian interval: walkers start before turning traffic</li><li>Every second of red is pedestrian delay; long waits invite red-light crossing</li></ul>
+<p class="page">8 / 26</p>
+</section>
+<div class="explain">The minimum pedestrian green is the walk time plus the crossing length divided by the walking speed. Where older people and children cross, use a slower design walking speed. A median refuge splits a wide crossing into two shorter stages, and a leading pedestrian interval lets walkers start before turning traffic. Every second of red is a delay for pedestrians, and long waits invite crossing on red.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s9" data-layout="bullets">
+<h2>Public transport priority at signals</h2>
+<ul><li>Passive priority: timing and progression set for bus speeds and stops</li><li>Active priority: green extension or early green when a bus is detected</li><li>Queue jumps and bus lanes let buses bypass the car queue</li><li>Conditional priority: only for late buses, protects cross-street traffic</li><li>Signal delay is a large, controllable share of bus running time</li></ul>
+<p class="page">9 / 26</p>
+</section>
+<div class="explain">Signals can give buses priority in several ways. Passive priority sets timing and progression for bus speeds and stops, while active priority extends a green or starts it early when a bus is detected. Queue jumps and bus lanes let buses pass the car queue, and conditional priority helps only late buses, which protects cross-street traffic. Delay at signals is a large part of bus running time, and it can be controlled.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s10" data-layout="bullets">
+<h2>Bus lanes at junctions</h2>
+<ul><li>Kerbside lanes conflict with right turns, stops and loading</li><li>Median lanes avoid the kerb but need safe pedestrian access to stops</li><li>Pre-signals and set-back stop lines give buses the front of the queue</li><li>Taking a lane from cars raises their degree of saturation</li><li>Enforcement decides whether the lane works</li></ul>
+<p class="page">10 / 26</p>
+</section>
+<div class="explain">Bus lanes at junctions need careful design. A kerbside lane conflicts with right turns, stops and loading, while a median lane avoids the kerb but needs safe pedestrian access to its stops. Pre-signals and set-back stop lines let buses reach the front of the queue. Taking a lane from cars raises their degree of saturation, and enforcement decides whether the lane works.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s11" data-layout="bullets">
+<h2>Coordination along a corridor</h2>
+<ul><li>Offsets let a platoon meet successive greens: a green wave</li><li>Works best in one direction and with regular junction spacing</li><li>All coordinated junctions share one cycle — usually the longest one needed</li><li>Progression speed is a policy choice: set it for safe urban speeds</li><li>Adaptive control adjusts splits to measured demand — needs detectors and maintenance</li></ul>
+<p class="page">11 / 26</p>
+</section>
+<div class="explain">Coordination sets offsets so that a platoon, a group of vehicles moving together, meets one green after another: a green wave. It works best in one direction and where junctions are evenly spaced. All coordinated junctions must share one cycle, usually the longest one needed. The progression speed is a policy choice, so set it for safe urban speeds. Adaptive control changes the splits with measured demand, but it needs working detectors and maintenance.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s12" data-layout="figure">
+<h2>A green wave</h2>
+<img src="../assets/w10_green_wave.png" alt="A green wave" loading="lazy">
+<p class="caption">Illustrative: junctions 400 m apart, 80 s cycle, 40 s green, progression at 40 km/h.</p><p class="page">12 / 26</p>
+</section>
+<div class="explain">In this illustrative figure, junctions stand 400 m apart, each with an 80 s cycle and 40 s of green. The offsets are set so that a platoon travelling at 40 km/h reaches each junction during green. The green and red bars show the signal at each junction, and the diagonal lines are vehicles. The wave works for one direction; traffic in the other direction and pedestrians may still wait.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s13" data-layout="table">
+<h2>Geometric and operational measures</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Measure</th><th>Type</th><th>What it changes</th><th>Who gains / who pays</th></tr></thead>
+<tbody>
+<tr><td>Retiming</td><td>Operational</td><td>Cycle and splits</td><td>Most users gain; cheap, needs counts</td></tr>
+<tr><td>Median refuge</td><td>Geometric</td><td>Pedestrian minimum green</td><td>Pedestrians and everyone through shorter cycles; needs width</td></tr>
+<tr><td>Bus lane</td><td>Geometric</td><td>Bus queueing</td><td>Bus passengers gain; car capacity falls</td></tr>
+<tr><td>Active bus priority</td><td>Operational</td><td>Green timing for buses</td><td>Bus passengers gain; cross street waits longer</td></tr>
+<tr><td>Turn ban</td><td>Operational</td><td>Conflicts and phases</td><td>Through traffic gains; detours elsewhere</td></tr>
+<tr><td>Coordination</td><td>Operational</td><td>Offsets along the corridor</td><td>Main-road platoons gain; side streets and pedestrians may wait</td></tr>
+</tbody></table></div>
+<p class="page">13 / 26</p>
+</section>
+<div class="explain">The table compares six measures by type, what they change and who gains or pays. Retiming, active bus priority, turn bans and coordination are operational, so they change the control and not the street. A median refuge and a bus lane are geometric changes to the street itself. Each measure helps some users and costs others, such as a bus lane that helps passengers but removes car capacity.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s14" data-layout="section">
+<h2>LAB10 preview: one junction, four alternatives</h2>
+<ul><li>Real OSM location; SYNTHETIC flows and timings, because Tashkent publishes no counts</li></ul><p class="page">14 / 26</p>
+</section>
+<div class="explain">LAB10 tests four alternatives at one Tashkent junction. The location is real and comes from OpenStreetMap. The traffic flows and signal timings are synthetic, because no counts for Tashkent are published.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s15" data-layout="figure">
+<h2>The site: Shahrisabz St × Istiqbol St</h2>
+<img src="../assets/w10_junction_site.png" alt="The site: Shahrisabz St × Istiqbol St" loading="lazy">
+<p class="caption">OSM geometry with 24 signal nodes within 500 m. Pulatova (2024) photographed this junction as a redesign case.</p><p class="page">15 / 26</p>
+</section>
+<div class="explain">The map shows the LAB10 junction of Shahrisabz St and Istiqbol St from OpenStreetMap geometry. OpenStreetMap has 24 signal nodes within 500 m of it. Approaches M1 and M2 are on Shahrisabz St, and S1 and S2 are on Istiqbol St. Pulatova (2024) photographed this junction as a redesign case, but the flows in the lab are synthetic.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s16" data-layout="figure">
+<h2>Who gains from each alternative?</h2>
+<img src="../assets/w10_delay_by_alternative.png" alt="Who gains from each alternative?" loading="lazy">
+<p class="caption">SYNTHETIC results; bus occupancy assumed 55 passengers, car occupancy 1.3.</p><p class="page">16 / 26</p>
+</section>
+<div class="explain">For each alternative, the chart has three bars: the delay of an average vehicle, passenger and pedestrian. Passenger delay counts the people in each vehicle, with 55 passengers assumed per bus and 1.3 people per car. A bus therefore counts for many more people than a car. All results are synthetic.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s17" data-layout="bullets">
+<h2>Reading the results</h2>
+<ul><li>Retiming alone: vehicle delay 19.2 → 14.3 s; the cycle falls from 120 to 80 s</li><li>Bus lanes alone: bus delay 11.1 s, but the cycle grows to 100 s for pedestrians</li><li>So passengers barely gain: 15.0 s against 13.7 s with retiming only</li><li>Bus lanes + refuge: 65 s cycle; passengers 11.8 s, pedestrians 12.5 s; vehicle delay 15.1 s (all vehicles)</li><li>The refuge, a geometric change, is what makes the short 65 s cycle possible</li></ul>
+<p class="page">17 / 26</p>
+</section>
+<div class="explain">Retiming alone cuts the cycle from 120 s to 80 s and vehicle delay from 19.2 to 14.3 s. Bus lanes alone cut bus delay to 11.1 s, but the cycle grows to 100 s, so passengers wait 15.0 s against 13.7 s with retiming only. Bus lanes with a refuge allow a 65 s cycle, with passenger delay 11.8 s and pedestrian delay 12.5 s, while the delay averaged over all vehicles is 15.1 s. The refuge is a geometric change to the street, and it is what allows the shorter signal cycle.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s18" data-layout="bullets">
+<h2>How robust is the ranking?</h2>
+<ul><li>Break-even bus occupancy for bus lanes alone: 120.2 passengers per bus</li><li>With the refuge: only 10.8 — the result survives almost any occupancy</li><li>Test saturation flow, walking speed and occupancy, one at a time</li><li>Report the conditions under which your preferred alternative wins</li></ul>
+<p class="page">18 / 26</p>
+</section>
+<div class="explain">Bus lanes alone beat retiming for passengers only if each bus carries more than 120.2 passengers. With the refuge, the break-even falls to 10.8 passengers per bus, so the result holds for almost any occupancy. Test saturation flow, walking speed and occupancy one at a time. Then report the conditions under which your preferred alternative wins.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s19" data-layout="bullets">
+<h2>Checking models against observations</h2>
+<ul><li>A delay formula is a model: check it before you trust its ranking</li><li>Observed: cycle and greens by stopwatch, saturation headways, queue at end of red</li><li>Compare predicted and observed queues for each approach</li><li>If they disagree, recalibrate saturation flow and lost time first</li><li>Webster assumes random arrivals and undersaturation — not valid when queues persist</li></ul>
+<p class="page">19 / 26</p>
+</section>
+<div class="explain">A delay formula is a model, so check it against the junction before you trust its ranking. Observe the cycle and greens, the saturation headways and the queue at the end of red, and compare the predicted and observed queues on each approach. If they disagree, recalibrate saturation flow and lost time first. Webster&#39;s formula assumes random arrivals and queues that clear in each cycle, so it fails where queues persist.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s20" data-layout="bullets">
+<h2>Reporting uncertainty</h2>
+<ul><li>State every assumption next to the result it drives</li><li>Give ranges from sensitivity tests, not one number</li><li>Local example: the TIP crash study reports a pedestrian odds ratio of OR 2.60–3.89 across coding choices</li><li>The conclusion held because every value in the range pointed the same way</li><li>Do the same for delay: does the ranking survive the range?</li></ul>
+<p class="page">20 / 26</p>
+</section>
+<div class="explain">Write each assumption next to the result it drives, and give ranges from sensitivity tests rather than one number. The TIP crash study shows how: its pedestrian odds ratio is OR 2.60–3.89, depending on how one unclear code is handled. Its conclusion held because every value in the range pointed the same way. Ask the same of your delay results: does the ranking survive the range?</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s21" data-layout="bullets">
+<h2>Signals as city assets</h2>
+<ul><li>A timing plan is an asset: record it, date it, review it</li><li>TSTU already mapped Tashkent&#39;s signals in a GIS inventory (Sodikov et al., 2016)</li><li>OSM suggests about 729 signalised junction clusters to manage</li><li>Retiming is among the cheapest measures — if the data exist</li></ul>
+<p class="page">21 / 26</p>
+</section>
+<div class="explain">A signal timing plan is an asset, like a pavement or a tree, so record it, date it and review it. TSTU has already mapped Tashkent&#39;s signals in a GIS inventory. OpenStreetMap suggests about 729 signalised junction clusters to manage. Retiming is among the cheapest measures, but only if the counts and timings exist.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s22" data-layout="question">
+<h2>Discussion</h2>
+<blockquote class="question">Your corridor&#39;s junction gets one change this year. Retiming, a refuge or a bus lane — which, and what evidence would convince the city?</blockquote>
+<ul><li>Answer with vehicle, passenger and pedestrian delay — and one assumption you would test.</li></ul><p class="page">22 / 26</p>
+</section>
+<div class="explain">Your corridor&#39;s junction can get one change this year: retiming, a refuge or a bus lane. Choose one and argue for it with vehicle, passenger and pedestrian delay. Then name one assumption you would test, because the city will ask how sure you are.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s23" data-layout="takeaways">
+<h2>Key takeaways</h2>
+<ul><li>Webster gives a starting cycle; pedestrian crossing time often sets the real one</li><li>Rankings change when delay is counted per person instead of per vehicle</li><li>Geometric and operational measures work best together</li><li>Calibrate on observations, then report the range, not a single number</li></ul>
+<p class="page">23 / 26</p>
+</section>
+<div class="explain">Webster&#39;s method gives a starting cycle, but pedestrian crossing time often sets the real one. A ranking can change when delay is counted per person instead of per vehicle. Geometric and operational measures work best together. Calibrate your model on observations, and then report a range, not a single number.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s24" data-layout="bullets">
+<h2>Before LAB10 and P10</h2>
+<ul><li>Open LAB10_junction.gpkg in QGIS and LAB10_synthetic_junction.xlsx in Excel</li><li>Read Knoop&#39;s chapters on the fundamental diagram and shockwaves</li><li>Collect counts, cycle times and queues at one junction or crossing of your corridor</li><li>Course project Stage 3 (street design and operational calculations) is due this week</li></ul>
+<p class="page">24 / 26</p>
+</section>
+<div class="explain">Before the lab, open LAB10_junction.gpkg in QGIS and the synthetic junction workbook in Excel. Read Knoop&#39;s chapters on the fundamental diagram and shockwaves. Collect counts, cycle times and queues at one junction or crossing of your corridor, from a safe point. Stage 3 of the course project, on street design and operational calculations, is due this week.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s25" data-layout="references">
+<h2>References</h2>
+<ul><li>Urbanik, T., et al. (2015). Signal Timing Manual (2nd ed.), NCHRP Report 812. Transportation Research Board. https://www.nap.edu/read/22097/chapter/2</li><li>TU Delft, Department of Transport &amp; Planning. CIEM6250 Transport Systems Design — units B-1 Network Design, B-2 Service Design, B-3 Physical Infrastructure Management, B-4 Traffic Operations Management (Smart Public Transport Lab education page; MSc Civil Engineering TTE track). https://www.tudelft.nl/citg/over-faculteit/afdelingen/transport-planning/research/labs/smart-public-transport-lab/education</li><li>Synthetic teaching dataset generated for this course (method and random seed in each workbook&#39;s README sheet).</li><li>Webster, F. V. (1958). Traffic Signal Settings. Road Research Technical Paper No. 39. London: HMSO.</li><li>Knoop, V. L. (2021). Traffic Flow Theory: An Introduction with Exercises (3rd ed.). TU Delft OPEN Publishing. https://books.open.tudelft.nl/home/catalog/book/203</li><li>World Health Organization (2023). Pedestrian Safety: A Road Safety Manual for Decision-Makers and Practitioners (2nd ed.). Geneva: WHO. https://www.who.int/publications/i/item/9789240072497</li><li>Global Designing Cities Initiative &amp; NACTO (2016). Global Street Design Guide. Island Press. https://globaldesigningcities.org/publication/global-street-design-guide/</li><li>Wilson, N., Sánchez-Martínez, G., &amp; Nassir, N. (2017). 1.258J/11.541J Public Transportation Systems, Spring 2017. MIT OpenCourseWare. https://ocw.mit.edu/courses/1-258j-public-transportation-systems-spring-2017/</li><li>Kittelson &amp; Associates et al. (2013). Transit Capacity and Quality of Service Manual (3rd ed.), TCRP Report 165. Transportation Research Board. https://nap.nationalacademies.org/read/24766</li><li>OpenStreetMap contributors (2026). Uzbekistan extract, Geofabrik GmbH (download.geofabrik.de). https://download.geofabrik.de/asia/uzbekistan.html</li><li>Pulatova, Z. S. (2024). Walkability assessment of Tashkent city districts (PhD dissertation, in Uzbek; supervisor J. I. Sodikov). Tashkent State Transport University.</li><li>TU Delft (2014). CIE4821 Traffic Flow Theory and Simulation. TU Delft OpenCourseWare. https://ocw.tudelft.nl/courses/traffic-flow-theory-simulation/</li><li>Sodikov, J. I., et al. (under review). Odds of recorded death among police-recorded road-traffic casualties and register data quality in Tashkent, Uzbekistan. Traffic Injury Prevention (revision r4).</li><li>Sodikov, J. I., et al. (2016). GIS inventory of traffic signals on Tashkent streets (in Russian). Transport Systems of Siberia.</li></ul>
+<p class="page">25 / 26</p>
+</section>
+</div>
+<div class="unit" data-unit>
+<section class="slide slide-title" id="s26" data-layout="licence">
+<p class="muted">© 2026 TSTU, J. Sodikov. CC BY-NC-SA 4.0. Adapts openly licensed material (CC BY-NC-SA 4.0) listed in the references.</p>
+<p class="page">26 / 26</p>
+</section>
+</div>
+<nav class="controls" aria-label="Slides"><button type="button" id="prev">&larr; Previous</button><span id="pos"></span><button type="button" id="next">Next &rarr;</button></nav>
+</div>
+<p class="meta"><a href="files/LEC20.pptx" download>Download slides (.pptx)</a></p>
+<footer>CC BY-NC-SA 4.0 · TSTU</footer>
+</main>
+<script src="../static/slides.js" defer></script></body>
+</html>

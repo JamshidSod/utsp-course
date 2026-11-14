@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LEC11 · Route and service structures · Urban Transport Systems Planning and Design</title>
+<link rel="stylesheet" href="../static/site.css">
+</head>
+<body>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Show menu">
+<header class="topbar">
+<label for="nav-toggle" class="nav-button">Menu</label>
+<a class="brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+</header>
+<nav class="side" aria-label="Course">
+<a class="brand side-brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+<h2>Weeks</h2>
+<ul>
+<li><a href="../w01/index.html">Week 1 · Planning transport systems around objectives</a></li>
+<li><a href="../w02/index.html">Week 2 · Data and baseline analysis</a></li>
+<li><a href="../w03/index.html">Week 3 · Land use and transport justice</a></li>
+<li><a href="../w04/index.html">Week 4 · Multimodal network design</a></li>
+<li><a href="../w05/index.html">Week 5 · Demand forecasting and policy impacts</a></li>
+<li><a href="../w06/index.html" class="current" aria-current="page">Week 6 · Public transport service design</a></li>
+<li><a href="../w07/index.html">Week 7 · Interchanges and allocation of street space</a></li>
+<li><a href="../w08/index.html">Week 8 · Safe walking and cycling networks</a></li>
+<li><a href="../w09/index.html">Week 9 · Infrastructure management and climate adaptation</a></li>
+<li><a href="../w10/index.html">Week 10 · Traffic operations management</a></li>
+<li><span class="locked">Week 11 · Parking and urban logistics <small>opens 2026-11-16</small></span></li>
+<li><span class="locked">Week 12 · Governance and public participation <small>opens 2026-11-23</small></span></li>
+<li><span class="locked">Week 13 · Decarbonisation and emerging mobility services <small>opens 2026-11-30</small></span></li>
+<li><span class="locked">Week 14 · Appraisal and implementation <small>opens 2026-12-07</small></span></li>
+<li><span class="locked">Week 15 · Monitoring and evidence-based recommendations <small>opens 2026-12-14</small></span></li>
+</ul>
+<h2>Course documents</h2>
+<ul>
+<li><a href="../course/Course_project_brief.html">Course project brief</a></li>
+<li><a href="../course/Analytical_paper_brief.html">Analytical paper brief</a></li>
+<li><a href="../course/Marking_guides.html">Marking guides</a></li>
+</ul>
+</nav>
+<main>
+<header class="masthead"><p class="kicker"><a href="index.html#lectures">Week 6</a> · Lecture 1</p><h1>LEC11 · Route and service structures</h1></header>
+<div class="viewer" id="viewer">
+<div class="unit" data-unit>
+<section class="slide slide-title" id="s1" data-layout="title">
+<p class="kicker">Week 6 · Lecture 1</p>
+<h2>Route and service structures</h2>
+<p class="muted">LEC11 · Urban Transport Systems Planning and Design · TSTU · Prof. J. Sodikov</p>
+<p class="page">1 / 24</p>
+</section>
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s2" data-layout="section">
+<h2>What you will be able to do after today</h2>
+<ul><li>Compare direct, grid and trunk-and-feeder service structures</li><li>Explain the trade-off between coverage, frequency, vehicle capacity and resources</li><li>Derive cycle time, frequency, headway and fleet for a single route</li><li>Describe Tashkent&#39;s bus network from open data — and what the data cannot show</li></ul><p class="page">2 / 24</p>
+</section>
+<div class="explain">This lecture is about designing bus services: which routes run, how often and with how many buses. You will compare three service structures: direct routes, a grid, and trunk-and-feeder. You will learn the trade-off between coverage, frequency, vehicle capacity and resources, and calculate cycle time, frequency, headway (the time between buses) and fleet for one route. Finally, you will describe Tashkent&#39;s bus network from open data and see what the data cannot show.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s3" data-layout="bullets">
+<h2>Where this sits: the service-design perspective</h2>
+<ul><li>Service design: lines, stops, frequencies and vehicles on top of the network</li><li>Design variables: route structure, stop spacing, frequency, vehicle size, priority</li><li>Passengers want short access, short waits, few transfers and fast reliable rides</li><li>Operators want full vehicles and few vehicle-hours — the two pull apart</li><li>A published course on public transportation systems gives the calculations; van Nes gives the network logic</li></ul>
+<p class="page">3 / 24</p>
+</section>
+<div class="explain">Service design, the second technical perspective, decides the lines, stops, frequencies and vehicles that run on top of the network. Its design variables are route structure, stop spacing, frequency, vehicle size and priority. Passengers want short walks to the stop, short waits, few transfers and fast, reliable rides. Operators want full vehicles and few vehicle-hours, so the two sets of wishes pull apart. A published course on public transportation systems supplies the calculations, and van Nes supplies the network logic.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s4" data-layout="bullets">
+<h2>The core trade-off: one budget, four wishes</h2>
+<ul><li>Coverage: a stop near everyone, including low-demand areas</li><li>Frequency: short waits and easy transfers</li><li>Vehicle capacity: enough places at the busiest point</li><li>Resources: buses and drivers (vehicle-hours) are fixed in the short run</li><li>More of one means less of another unless resources grow or speed rises</li></ul>
+<p class="page">4 / 24</p>
+</section>
+<div class="explain">A bus service has one budget but four wishes. Coverage puts a stop near everyone, even in areas of low demand, and frequency gives short waits and easy transfers. Vehicle capacity gives enough places at the busiest point. Resources, the buses and drivers counted as vehicle-hours, are fixed in the short run. So more of one wish means less of another, unless resources grow or buses run faster.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s5" data-layout="bullets">
+<h2>Ridership or coverage? Decide explicitly (Walker 2008)</h2>
+<ul><li>Ridership goal: concentrate service where many people will use it</li><li>Coverage goal: provide some service everywhere, for access and fairness</li><li>Both are legitimate — but a route cannot fully serve both</li><li>Good practice: agree a budget split (for example a share for coverage) before designing</li><li>Links to Week 3: coverage is a transport-justice decision</li></ul>
+<p class="page">5 / 24</p>
+</section>
+<div class="explain">Walker (2008) separates two goals for public transport. A ridership goal puts service where many people will use it, while a coverage goal gives some service everywhere, for access and fairness. Both goals are legitimate, but one route cannot fully serve both. Good practice is to agree how the budget is split between them before you design. As Week 3 showed, how much coverage to give is a question of transport justice.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s6" data-layout="figure">
+<h2>Two structures for the same city</h2>
+<img src="../assets/w06_trunk_feeder.png" alt="Two structures for the same city" loading="lazy">
+<p class="caption">Direct routes give one-seat rides but stack buses on the same streets; trunk-and-feeder concentrates frequency but adds a transfer.</p><p class="page">6 / 24</p>
+</section>
+<div class="explain">The figure compares two ways to serve the same city. Direct routes give one-seat rides, meaning trips with no transfer, but many buses end up on the same streets. Trunk-and-feeder puts the buses on one high-frequency trunk, with feeder routes bringing passengers to a transfer hub. The price is a transfer for most trips.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s7" data-layout="bullets">
+<h2>Network structures</h2>
+<ul><li>Radial direct routes: good to the centre, poor across town</li><li>Grid: any-to-any with one transfer; needs high frequency on every line</li><li>Trunk-and-feeder: high-capacity trunk fed by local routes at hubs</li><li>Timed transfers (pulse) work when frequencies are low</li><li>Transfers are acceptable when waits are short, walks are short and fares are integrated</li></ul>
+<p class="page">7 / 24</p>
+</section>
+<div class="explain">Radial direct routes serve the centre well but give poor service across town. A grid lets you travel from anywhere to anywhere with one transfer, but it needs high frequency on every line. Trunk-and-feeder uses a high-capacity trunk, fed by local routes at hubs. Timed transfers, or pulses, where buses meet at a hub at the same time, work when frequencies are low. Passengers accept transfers when waits and walks are short and fares are integrated.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s8" data-layout="bullets">
+<h2>Single-route design</h2>
+<ul><li>Running time = route length ÷ running speed + stops × time lost per stop</li><li>Cycle time C = 2 × running time + layover and recovery at both ends</li><li>Fleet N = C ÷ h, rounded up; the operated headway is then C ÷ N</li><li>Frequency = buses per hour = one hour ÷ headway; departures follow the timetable</li><li>Speed and stop time are the levers: cut C and the same fleet runs more often</li></ul>
+<p class="page">8 / 24</p>
+</section>
+<div class="explain">Running time is the route length divided by the running speed, plus the number of stops times the time lost at each stop. The cycle time C is the time for one bus to make a round trip: twice the running time plus layover and recovery time at both ends. The fleet N is C divided by the headway h, rounded up, and the headway actually operated is then C ÷ N. Frequency is the number of buses per hour, which is one hour divided by the headway. Speed and stop time are the levers, because a shorter cycle lets the same fleet run more often.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s9" data-layout="figure">
+<h2>Cycle time and fleet on a time–distance diagram</h2>
+<img src="../assets/w06_cycle_time.png" alt="Cycle time and fleet on a time–distance diagram" loading="lazy">
+<p class="caption">Illustrative route: 12 km, 24 stops, 18 km/h, 30 s per stop, 15% layover.</p><p class="page">9 / 24</p>
+</section>
+<div class="explain">The time–distance diagram follows one bus on an illustrative route of 12 km with 24 stops, at 18 km/h and 30 s per stop, plus 15% layover. The dark line is one bus going out and back, and each light line is a later bus that starts one headway after the one before. The time for one round trip is the cycle time, and dividing it by the headway gives the number of buses needed. Check the fleet in the chart title by applying the cycle-time formula yourself.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s10" data-layout="bullets">
+<h2>Frequency from demand</h2>
+<ul><li>Maximum-load-point method: f = peak load ÷ (vehicle capacity × load factor)</li><li>Load-profile method: use the whole profile to shorten or split the route</li><li>Policy headway: a minimum frequency even where demand is low</li><li>Choose the higher of the demand and policy frequencies</li><li>Ride checks or counts at the busiest stop give the peak load</li></ul>
+<p class="page">10 / 24</p>
+</section>
+<div class="explain">The maximum-load-point method sets the frequency so that buses have room at the busiest point: peak load divided by vehicle capacity times load factor. The load factor is the share of places you plan to fill. The load-profile method uses the load along the whole route to decide whether to shorten or split it. A policy headway sets a minimum frequency even where demand is low, and you choose whichever frequency is higher. The peak load comes from ride checks or counts at the busiest stop.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s11" data-layout="figure">
+<h2>The busiest link sets the frequency</h2>
+<img src="../assets/w06_load_profile.png" alt="The busiest link sets the frequency" loading="lazy">
+<p class="caption">Synthetic load profile. Boardings minus alightings give the load on each link.</p><p class="page">11 / 24</p>
+</section>
+<div class="explain">A load profile shows how many passengers are on board between each pair of stops. The load on each link is the load before the stop, plus the people boarding, minus the people alighting. The busiest link, called the maximum-load point, sets the frequency the route needs. Where the load drops along the route, some buses could turn back early, which is called short-turning.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s12" data-layout="bullets">
+<h2>Worked example: route 8, Sergeli to Chilonzor (LAB6)</h2>
+<ul><li>Route 8: 17.84 km, 29 stops, 950 passengers/h (OSM length and stops; synthetic load)</li><li>Running time 73.97 min one way; cycle 170.1 min including layover</li><li>Required frequency 13.97 buses/h, so headway 4.29 min</li><li>Fleet 40 buses; operated headway 4.25 min; expected wait 2.89 min</li></ul>
+<p class="page">12 / 24</p>
+</section>
+<div class="explain">LAB6 applies these formulas to route 8, from Sergeli to Chilonzor: 17.84 km, 29 stops and 950 passengers/h at the busiest point. The length and stops come from OSM, but the load is synthetic. One-way running time is 73.97 minutes, and the cycle with layover is 170.1 minutes. The load needs 13.97 buses/h, a headway of 4.29 minutes, so the route needs a fleet of 40 buses. The operated headway is then 4.25 minutes and the expected wait 2.89 minutes.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s13" data-layout="section">
+<h2>Tashkent&#39;s bus network in open data</h2>
+<ul><li>OpenStreetMap route relations, October 2026 extract — there is no open GTFS or ridership data</li></ul><p class="page">13 / 24</p>
+</section>
+<div class="explain">The next slides describe Tashkent&#39;s bus network using OpenStreetMap (OSM) route relations from the October 2026 extract. A route relation is the OSM record that lists the streets and stops of one route. No open GTFS feed, an open format for timetables, and no ridership data were found, so the data show where routes run but not how often or how full.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s14" data-layout="figure">
+<h2>Route length and stops per route</h2>
+<img src="../assets/w06_route_lengths.png" alt="Route length and stops per route" loading="lazy">
+<p class="caption">125 relations; median 18.6 km one way and 34 stops.</p><p class="page">14 / 24</p>
+</section>
+<div class="explain">OSM has 125 bus route relations for Tashkent, and each direction of a route is usually a separate relation. The median relation is 18.6 km long in one direction and has 34 stops. The longest relations belong to suburban routes.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s15" data-layout="bullets">
+<h2>What the open data shows — and what it does not</h2>
+<ul><li>125 bus route relations carrying 67 route numbers</li><li>117 of 125 relations have their stops mapped in order</li><li>2,019 bus stops and 49 metro stations in the city</li><li>No open GTFS timetable, ridership, load or speed data exists for Tashkent</li><li>Route refs are inconsistent in places — check before you join tables</li></ul>
+<p class="page">15 / 24</p>
+</section>
+<div class="explain">The 125 relations carry 67 route numbers, and 117 of the 125 have their stops mapped in order. The city has 2,019 mapped bus stops and 49 metro stations. No open timetable, ridership, load or speed data were found for Tashkent, so you have to count buses on the street to learn frequencies. Route numbers are also inconsistent in places, so check them before you join tables.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s16" data-layout="figure">
+<h2>Where routes overlap</h2>
+<img src="../assets/w06_route_overlap.png" alt="Where routes overlap" loading="lazy">
+<p class="caption">Distinct route numbers per OSM way. Orange = 10 or more routes on the same street.</p><p class="page">16 / 24</p>
+</section>
+<div class="explain">The map colours each street section by how many distinct route numbers use it. Orange sections carry 10 or more routes, and metro stations are marked as white dots. These shared sections already work like trunks, so they are natural places to consider bus lanes or a new route structure.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s17" data-layout="bullets">
+<h2>Reading the overlap map</h2>
+<ul><li>Up to 18 route numbers share one street section</li><li>5.0 km of street carries 10 or more route numbers (a lower bound)</li><li>Overlapping routes = high combined frequency, but uncoordinated headways</li><li>Restructure: one frequent trunk on the shared section, feeders beyond</li><li>Or keep direct routes and coordinate them with priority and a common timetable</li></ul>
+<p class="page">17 / 24</p>
+</section>
+<div class="explain">Up to 18 route numbers share one street section, and 5.0 km of street carries 10 or more. The 5.0 km is a lower bound, because OSM splits streets differently in each direction. Overlapping routes give a high combined frequency, but their headways are not coordinated, so buses may arrive in groups. One option is a single frequent trunk on the shared section, with feeders beyond it. The other is to keep the direct routes and coordinate them with priority and a common timetable.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s18" data-layout="figure">
+<h2>Who is within walking distance of a stop?</h2>
+<img src="../assets/w06_coverage_map.png" alt="Who is within walking distance of a stop?" loading="lazy">
+<p class="caption">500 m straight-line catchments of OSM bus stops and metro stations, study districts.</p><p class="page">18 / 24</p>
+</section>
+<div class="explain">The map shows straight-line circles of 500 m around OSM bus stops and metro stations in the study districts. The 500 m comes from the SNiP planning norm, as Pulatova (2024) reports it, which allows up to 600 m in low-density areas. Land near a bus stop is light, land near a metro station is navy, and the rest is pale. Week 3 showed that straight-line circles overstate real walking access, so read the map as an upper limit.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s19" data-layout="bullets">
+<h2>Coverage: buses are the access layer</h2>
+<ul><li>71.3% of the study area is within 500 m of a bus stop; only 7.9% of a metro station</li><li>Ergashova: 74.4% of 585 mahallas have no metro station within a 15-minute walk</li><li>So buses must feed the metro and cover the city, not compete with it</li><li>Why area, not people? Kontur puts 76% of modelled residents in three outer districts — implausible</li><li>Check gridded population against local statistics before using it</li></ul>
+<p class="page">19 / 24</p>
+</section>
+<div class="explain">In the study area, 71.3% of the land is within 500 m of a bus stop, but only 7.9% is within 500 m of a metro station. Ergashova (2026) found that 74.4% of the 585 mahallas have no metro station within a 15-minute walk. So buses must feed the metro and cover the city, not compete with it. Coverage is measured by area because the Kontur population grid puts 76% of modelled residents in three outer districts, which is implausible. Check gridded population against local statistics before you use it.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s20" data-layout="bullets">
+<h2>The city&#39;s own targets point to frequency and speed</h2>
+<ul><li>2022–2025 concept: bus operating speed +17%</li><li>Regularity of service up to 95%</li><li>Route intervals: up to 35% shorter headways</li><li>Public transport to 43% of trips</li><li>All four depend on street priority — the subject of the next lecture</li></ul>
+<p class="page">20 / 24</p>
+</section>
+<div class="explain">The 2022–2025 transport concept sets four targets: bus operating speed up by 17%, service regularity up to 95%, headways up to 35% shorter, and public transport at 43% of trips. All four depend on giving buses priority on the street. The next lecture is about that priority.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s21" data-layout="question">
+<h2>Discussion</h2>
+<blockquote class="question">On your corridor, would you keep the direct routes or create a trunk with feeders? What would passengers lose and gain?</blockquote>
+<ul><li>Answer with transfers, waiting time and walking distance.</li></ul><p class="page">21 / 24</p>
+</section>
+<div class="explain">This question asks you to apply the service trade-off to your own corridor. Keeping direct routes saves passengers a transfer, while a trunk with feeders gives frequent service on the shared section but makes many passengers change. Compare the two by transfers, waiting time and walking distance, and say who gains and who loses.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s22" data-layout="takeaways">
+<h2>Key takeaways</h2>
+<ul><li>Service design trades coverage, frequency and capacity within a fixed resource</li><li>Fleet = cycle time ÷ headway: speed and stop time free up buses</li><li>Frequency comes from the busiest link or from policy, whichever is higher</li><li>Tashkent&#39;s routes overlap heavily and its open data has no timetables or loads</li></ul>
+<p class="page">22 / 24</p>
+</section>
+<div class="explain">Service design trades coverage, frequency and capacity against a fixed amount of resources. The fleet equals cycle time divided by headway, so faster running and shorter stops free up buses. The frequency comes from the busiest link or from a policy minimum, whichever is higher. In Tashkent, routes overlap heavily, and the open data have no timetables or loads.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s23" data-layout="references">
+<h2>References</h2>
+<ul><li>TU Delft, Department of Transport &amp; Planning. CIEM6250 Transport Systems Design — units B-1 Network Design, B-2 Service Design, B-3 Physical Infrastructure Management, B-4 Traffic Operations Management (Smart Public Transport Lab education page; MSc Civil Engineering TTE track). https://www.tudelft.nl/citg/over-faculteit/afdelingen/transport-planning/research/labs/smart-public-transport-lab/education</li><li>Wilson, N., Sánchez-Martínez, G., &amp; Nassir, N. (2017). 1.258J/11.541J Public Transportation Systems, Spring 2017. MIT OpenCourseWare. https://ocw.mit.edu/courses/1-258j-public-transportation-systems-spring-2017/</li><li>van Nes, R. Designing public transport networks / Public transport service networks: design of urban and regional networks. TU Delft research portal. https://research.tudelft.nl/en/publications/designing-public-transport-networks/</li><li>Walker, J. (2008). Purpose-driven public transport: creating a clear conversation about public transport goals. Journal of Transport Geography, 16(6), 436–442. https://ses.library.usyd.edu.au/handle/2123/6057</li><li>MIT Department of Urban Studies and Planning. 11.540 Urban Transportation Planning and Policy (J. Aloisi). MIT Course Catalog, Course 11 subjects. https://catalog.mit.edu/subjects/11/</li><li>Kittelson &amp; Associates et al. (2013). Transit Capacity and Quality of Service Manual (3rd ed.), TCRP Report 165. Transportation Research Board. https://nap.nationalacademies.org/read/24766</li><li>Synthetic teaching dataset generated for this course (method and random seed in each workbook&#39;s README sheet).</li><li>OpenStreetMap contributors (2026). Uzbekistan extract, Geofabrik GmbH (download.geofabrik.de). https://download.geofabrik.de/asia/uzbekistan.html</li><li>Pulatova, Z. S. (2024). Walkability assessment of Tashkent city districts (PhD dissertation, in Uzbek; supervisor J. I. Sodikov). Tashkent State Transport University.</li><li>Ergashova, M. Z. (2026). 15-minute walkability of Tashkent mahallas — dissertation defence presentation, 14 Oct 2026 (in Uzbek). Tashkent State Transport University.</li><li>Kontur (2023). Kontur Population: Uzbekistan, 400 m H3 hexagons. Humanitarian Data Exchange. https://data.humdata.org/dataset/kontur-population-uzbekistan</li></ul>
+<p class="page">23 / 24</p>
+</section>
+</div>
+<div class="unit" data-unit>
+<section class="slide slide-title" id="s24" data-layout="licence">
+<p class="muted">© 2026 TSTU, J. Sodikov. CC BY-NC-SA 4.0. Adapts openly licensed material (CC BY-NC-SA 4.0) listed in the references.</p>
+<p class="page">24 / 24</p>
+</section>
+</div>
+<nav class="controls" aria-label="Slides"><button type="button" id="prev">&larr; Previous</button><span id="pos"></span><button type="button" id="next">Next &rarr;</button></nav>
+</div>
+<p class="meta"><a href="files/LEC11.pptx" download>Download slides (.pptx)</a></p>
+<footer>CC BY-NC-SA 4.0 · TSTU</footer>
+</main>
+<script src="../static/slides.js" defer></script></body>
+</html>

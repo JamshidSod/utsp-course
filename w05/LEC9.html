@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LEC9 · Travel demand and mode choice · Urban Transport Systems Planning and Design</title>
+<link rel="stylesheet" href="../static/site.css">
+</head>
+<body>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Show menu">
+<header class="topbar">
+<label for="nav-toggle" class="nav-button">Menu</label>
+<a class="brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+</header>
+<nav class="side" aria-label="Course">
+<a class="brand side-brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+<h2>Weeks</h2>
+<ul>
+<li><a href="../w01/index.html">Week 1 · Planning transport systems around objectives</a></li>
+<li><a href="../w02/index.html">Week 2 · Data and baseline analysis</a></li>
+<li><a href="../w03/index.html">Week 3 · Land use and transport justice</a></li>
+<li><a href="../w04/index.html">Week 4 · Multimodal network design</a></li>
+<li><a href="../w05/index.html" class="current" aria-current="page">Week 5 · Demand forecasting and policy impacts</a></li>
+<li><a href="../w06/index.html">Week 6 · Public transport service design</a></li>
+<li><a href="../w07/index.html">Week 7 · Interchanges and allocation of street space</a></li>
+<li><a href="../w08/index.html">Week 8 · Safe walking and cycling networks</a></li>
+<li><a href="../w09/index.html">Week 9 · Infrastructure management and climate adaptation</a></li>
+<li><a href="../w10/index.html">Week 10 · Traffic operations management</a></li>
+<li><span class="locked">Week 11 · Parking and urban logistics <small>opens 2026-11-16</small></span></li>
+<li><span class="locked">Week 12 · Governance and public participation <small>opens 2026-11-23</small></span></li>
+<li><span class="locked">Week 13 · Decarbonisation and emerging mobility services <small>opens 2026-11-30</small></span></li>
+<li><span class="locked">Week 14 · Appraisal and implementation <small>opens 2026-12-07</small></span></li>
+<li><span class="locked">Week 15 · Monitoring and evidence-based recommendations <small>opens 2026-12-14</small></span></li>
+</ul>
+<h2>Course documents</h2>
+<ul>
+<li><a href="../course/Course_project_brief.html">Course project brief</a></li>
+<li><a href="../course/Analytical_paper_brief.html">Analytical paper brief</a></li>
+<li><a href="../course/Marking_guides.html">Marking guides</a></li>
+</ul>
+</nav>
+<main>
+<header class="masthead"><p class="kicker"><a href="index.html#lectures">Week 5</a> · Lecture 1</p><h1>LEC9 · Travel demand and mode choice</h1></header>
+<div class="viewer" id="viewer">
+<div class="unit" data-unit>
+<section class="slide slide-title" id="s1" data-layout="title">
+<p class="kicker">Week 5 · Lecture 1</p>
+<h2>Travel demand and mode choice</h2>
+<p class="muted">LEC9 · Urban Transport Systems Planning and Design · TSTU · Prof. J. Sodikov</p>
+<p class="page">1 / 24</p>
+</section>
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s2" data-layout="section">
+<h2>What you will be able to do after today</h2>
+<ul><li>Explain the four steps of the classic travel-demand model and what each one assumes</li><li>Describe mode choice as a trade-off of time, price and convenience (logit)</li><li>Recognise the limits of simplified forecasts before you use one</li><li>Read Tashkent&#39;s demand evidence critically and name the data that is missing</li></ul><p class="page">2 / 24</p>
+</section>
+<div class="explain">This lecture is about forecasting how many people will travel and which modes they will use. You will learn the four steps of the classic travel-demand model and what each step assumes. You will see mode choice as a trade-off between time, price and convenience, described by the logit model. You will also learn the limits of simple forecasts and read Tashkent&#39;s demand evidence with care.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s3" data-layout="bullets">
+<h2>Why forecast at all?</h2>
+<ul><li>A forecast is a tool for comparing alternatives, not a prophecy</li><li>Every alternative must be tested in the same assessment year (syllabus §5)</li><li>Forecasts size infrastructure, services and budgets — errors are expensive</li><li>One published course teaches the four-step model among its planning methods</li><li>Another, on transportation modelling, builds it step by step with exercises</li></ul>
+<p class="page">3 / 24</p>
+</section>
+<div class="explain">A forecast is a tool for comparing alternatives, not a promise of what will happen. The syllabus requires every alternative to be tested in the same assessment year, so that the comparison is fair. Forecasts set the size of roads, services and budgets, so errors are expensive. One published course teaches the four-step model among its planning methods. Another, on transportation and spatial modelling, builds it step by step with exercises.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s4" data-layout="figure">
+<h2>The four-step model</h2>
+<img src="../assets/w05_four_step.png" alt="The four-step model" loading="lazy">
+<p class="caption">Generation → distribution → mode choice → assignment, with travel times fed back.</p><p class="page">4 / 24</p>
+</section>
+<div class="explain">The classic model has four steps, applied to zones, which are small areas of the city. Trip generation estimates how many trips start and end in each zone, distribution decides where they go, mode choice splits them between modes, and assignment loads them onto routes. Travel times from the loaded network should go back into the earlier steps, because congestion changes destinations, modes and routes. A model without this loop cannot show induced demand, the extra traffic that new capacity creates.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s5" data-layout="bullets">
+<h2>Step 1 — trip generation</h2>
+<ul><li>Productions: trips made by residents of a zone (households, cars, income)</li><li>Attractions: trips drawn by a zone (jobs, schools, shops, floor space)</li><li>Tools: trip rates per household or person, cross-classification, regression</li><li>Inputs come from a household travel survey — which Tashkent does not publish</li><li>Rates change with car ownership: motorisation feeds generation</li></ul>
+<p class="page">5 / 24</p>
+</section>
+<div class="explain">Trip generation estimates two numbers for each zone. Productions are the trips made by its residents and depend on households, cars and income; attractions are the trips drawn to it by jobs, schools, shops and floor space. Planners estimate them with trip rates, cross-classification tables or regression. The inputs normally come from a household travel survey, which Tashkent does not publish. Trip rates also rise with car ownership, so growing motorisation feeds trip generation.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s6" data-layout="bullets">
+<h2>Step 2 — distribution: the gravity model</h2>
+<ul><li>Trips from i to j grow with productions at i and attractions at j</li><li>They fall with the cost of travel between them: f(c) = exp(−βc)</li><li>Singly constrained: row totals match productions; doubly: columns match attractions too</li><li>β is calibrated so the model reproduces the observed trip-length distribution</li><li>Without observed trip lengths, β is an assumption — say so</li></ul>
+<p class="page">6 / 24</p>
+</section>
+<div class="explain">The gravity model sends more trips between zones with many productions and attractions, and fewer as the cost of travel between them grows. The cost effect is often written f(c) = exp(−βc), where β sets how quickly trips fall away with cost. A singly constrained model matches the trips produced in each zone, and a doubly constrained model also matches the trips attracted. β is calibrated so that the model reproduces observed trip lengths, so without such data β is an assumption and you must say so.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s7" data-layout="bullets">
+<h2>Worked example: four zones (LAB5 Distribution sheet)</h2>
+<ul><li>Four synthetic zones with productions, an attractiveness index and distances</li><li>At β = 0.15 per km the model gives a mean trip length of 4.22 km</li><li>Raise β and trips stay closer to home; lower β and trips spread out</li><li>The number only means something once compared with observed trip lengths</li></ul>
+<p class="page">7 / 24</p>
+</section>
+<div class="explain">The LAB5 Distribution sheet applies the gravity model to four synthetic zones. With β = 0.15 per km, the mean trip length is 4.22 km. A higher β makes long trips less attractive, so trips stay closer to home, while a lower β spreads them out. The result means little on its own, because it only becomes useful when you compare it with observed trip lengths.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s8" data-layout="bullets">
+<h2>Step 3 — mode choice as utility</h2>
+<ul><li>Each traveller compares the utility of each mode: V = β·time + β·cost + β·comfort + constant</li><li>Random-utility theory gives the logit model: P(m) = e^V(m) / Σ e^V(k)</li><li>Out-of-vehicle time (walk, wait, transfer) is usually weighted more than in-vehicle time</li><li>The mode constant captures what the variables miss: habit, image, reliability</li><li>Coefficients are estimated from stated- or revealed-preference surveys</li></ul>
+<p class="page">8 / 24</p>
+</section>
+<div class="explain">Mode choice assumes that each traveller compares the utility, or overall attractiveness, of each mode. Utility adds up weighted terms for time, cost and comfort, plus a mode constant that captures what these terms miss, such as habit, image and reliability. The logit model, from random-utility theory, turns the utilities into the probability of choosing each mode. Walking, waiting and transfer time usually weigh more than time in the vehicle. The weights are estimated from surveys of what people say they would choose (stated preference) or what they actually chose (revealed preference).</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s9" data-layout="figure">
+<h2>Worked example: what moves the bus share?</h2>
+<img src="../assets/w05_logit_curve.png" alt="Worked example: what moves the bus share?" loading="lazy">
+<p class="caption">Illustrative coefficients. Bus lane cuts in-vehicle time 35 → 28 min; parking charge adds 5 to car cost.</p><p class="page">9 / 24</p>
+</section>
+<div class="explain">The curve shows how the probability of choosing the bus changes with the difference in utility between bus and car. With illustrative coefficients, a bus lane that cuts in-vehicle time from 35 to 28 minutes raises the bus share. Adding 5 to the cost of the car with a parking charge raises it again, because it lowers the utility of driving. The coefficients were invented for teaching, so the example shows the logic, not a Tashkent result.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s10" data-layout="bullets">
+<h2>Time, price and convenience</h2>
+<ul><li>Time: in-vehicle, walking, waiting, transferring — valued differently</li><li>Price: fare, fuel, parking charge, tolls — and who pays them</li><li>Convenience: reliability, crowding, comfort, safety, information</li><li>Policy changes utilities; the model translates that into shares</li><li>Measures that change several terms at once (bus priority + parking price) work best</li></ul>
+<p class="page">10 / 24</p>
+</section>
+<div class="explain">Travellers judge a mode by its time, its price and its convenience. Time includes time in the vehicle, walking, waiting and transferring, and each is valued differently. Price covers fares, fuel, parking charges and tolls, and it matters who pays them. Convenience covers reliability, crowding, comfort, safety and information. Policy changes these terms, the model turns the changes into mode shares, and measures that change several terms together, such as bus priority with parking prices, work best.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s11" data-layout="bullets">
+<h2>Step 4 — assignment</h2>
+<ul><li>Trips are loaded onto routes in the network</li><li>All-or-nothing: everyone takes the shortest path (fine for uncongested networks)</li><li>User equilibrium (Wardrop): no traveller can save time by switching route</li><li>Public-transport assignment adds waiting, transfers and line frequencies</li><li>Congested times should feed back to steps 2 and 3</li></ul>
+<p class="page">11 / 24</p>
+</section>
+<div class="explain">Assignment loads the trips onto routes in the network. All-or-nothing assignment sends everyone along the shortest path, which is acceptable when the network is not congested. User equilibrium, as defined by Wardrop, is reached when no traveller can save time by changing route. Public-transport assignment must also include waiting, transfers and line frequencies. The congested travel times should then feed back into distribution and mode choice.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s12" data-layout="bullets">
+<h2>Limits of simplified forecasts</h2>
+<ul><li>Land use is held fixed — but new roads and lines move homes and jobs</li><li>No feedback means no induced demand: capacity looks free</li><li>Base-year calibration hides weak behavioural content</li><li>Point forecasts hide uncertainty — report ranges and test assumptions</li><li>Optimism bias: forecasts tend to favour the project being promoted</li></ul>
+<p class="page">12 / 24</p>
+</section>
+<div class="explain">Simple forecasts hold land use fixed, but new roads and lines move homes and jobs. Without feedback from congestion they cannot show induced demand, so new capacity looks free. A model tuned to match the base year can still say little about how people respond to change. A single forecast number hides uncertainty, so report ranges and test your assumptions. Watch for optimism bias: forecasts tend to favour the project being promoted.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s13" data-layout="section">
+<h2>Tashkent: what we know about demand</h2>
+<ul><li>Motorisation, mode shares and targets — and the data that is missing</li></ul><p class="page">13 / 24</p>
+</section>
+<div class="explain">The second part of the lecture looks at what is known about travel demand in Tashkent. It covers car ownership, mode shares and the city&#39;s targets. It also shows which data are missing, which matters as much as the data that exist.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s14" data-layout="figure">
+<h2>Motorisation is rising fast</h2>
+<img src="../assets/w05_motorisation.png" alt="Motorisation is rising fast" loading="lazy">
+<p class="caption">National private fleet 4.02 million → 4.73 million in under two years; Tashkent 197 cars / 1,000 vs national 103 per 1,000.</p><p class="page">14 / 24</p>
+</section>
+<div class="explain">Motorisation means growth in the number of cars that people own. The national fleet of private vehicles grew from 4.02 million at the beginning of 2024 to 4.73 million by October 2025, in under two years. Tashkent has 197 cars per 1,000 residents, almost twice the national average of 103 per 1,000. Normukhammadov (2026) reports these figures from official statistics and news sources.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s15" data-layout="bullets">
+<h2>Tashkent&#39;s demand in five numbers</h2>
+<ul><li>Population 3.04 million (beginning of 2024)</li><li>197 cars / 1,000 residents, almost twice the national 103 per 1,000</li><li>National private fleet growing about 7.5% per year</li><li>Cars carried 79% of trips and public transport 21% (2022 briefing)</li><li>The same briefing set the task of doubling public-transport use</li></ul>
+<p class="page">15 / 24</p>
+</section>
+<div class="explain">Tashkent had 3.04 million residents at the beginning of 2024. It has 197 cars per 1,000 residents, compared with 103 per 1,000 nationally, and the national private fleet grows by about 7.5% per year. A 2022 briefing reported that cars carried 79% of trips and public transport 21%. The same briefing set the task of doubling the use of public transport. Together, these numbers describe a city where car ownership is high and the national fleet is still growing.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s16" data-layout="bullets">
+<h2>Read the 79 / 21 split critically</h2>
+<ul><li>79% and 21% add up to the whole with no walking or cycling: motorised trips only</li><li>Source is a policy briefing, not a published household travel survey</li><li>No open origin–destination matrix, trip rates or mode shares by district exist</li><li>ITF/OECD&#39;s Tashkent decarbonisation study holds a detailed published mode-share model</li><li>Rule for your project: state where each demand number comes from and its year</li></ul>
+<p class="page">16 / 24</p>
+</section>
+<div class="explain">The 79% and 21% add up to the whole, with nothing left for walking or cycling, so they describe motorised trips only. They come from a policy briefing, not from a published household travel survey. No open origin–destination matrix, trip rates or mode shares by district were found for Tashkent. For your project, state where each demand number comes from and which year it describes.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s17" data-layout="bullets">
+<h2>Why do car owners switch — or not?</h2>
+<ul><li>Sodikov et al. (2026c) review the factors behind car owners&#39; shift to public transport in Tashkent</li><li>Read it with the utility frame: which factors are time, price or convenience?</li><li>Which factors can a corridor project change, and which need city policy?</li><li>Use it in P5 to justify the mode-share change in each alternative</li></ul>
+<p class="page">17 / 24</p>
+</section>
+<div class="explain">Sodikov and colleagues (2026) review the factors behind car owners&#39; shift to public transport in Tashkent. Read the review with the utility frame from this lecture: is each factor about time, price or convenience? Then ask which factors a corridor project can change and which need city-wide policy. In P5 you use this to justify the change in mode share in each alternative.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s18" data-layout="bullets">
+<h2>Targets imply a demand forecast</h2>
+<ul><li>2022–2025 concept: public-transport use to 43%, about 2.7 million passengers per day</li><li>Implied total: 2.7 million ÷ 43% = 6.28 million trips per day</li><li>LAB5 base year assumes 3.04 million residents × 2 trips = 6.08 million</li><li>The assumed trip rate is consistent with the target (ratio 0.97) — a sanity check, not a validation</li><li>A target is not a forecast: what measures would deliver it?</li></ul>
+<p class="page">18 / 24</p>
+</section>
+<div class="explain">The 2022–2025 transport concept aims to raise public-transport use to 43%, about 2.7 million passengers per day. Dividing 2.7 million by 43% gives about 6.28 million trips per day in total. The LAB5 base year assumes 3.04 million residents making 2 trips each, or 6.08 million trips, a ratio of 0.97 to that total. This agreement is a sanity check, not a validation, because the trip rate is a teaching assumption. A target is also not a forecast, since it does not say which measures would deliver it.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s19" data-layout="bullets">
+<h2>When there is no demand data: a thesis example</h2>
+<ul><li>Normukhammadov&#39;s network-growth model had no origin–destination data</li><li>Latent demand was represented by a regular grid of seed points 1,707 m apart</li><li>Benefit scenarios use 5,000 / 15,000 / 30,000 daily users — stated as assumptions</li><li>The thesis says so in its limitations: honest, and a model for your report</li></ul>
+<p class="page">19 / 24</p>
+</section>
+<div class="explain">Normukhammadov&#39;s network-growth model had no origin–destination data. To stand in for cycling demand at district scale, he used a regular grid of seed points 1,707 m apart. His benefit scenarios use 5,000, 15,000 and 30,000 daily users, and he states these as assumptions, not forecasts. The thesis names these gaps in its limitations, which is a good model for your own report.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s20" data-layout="question">
+<h2>Discussion</h2>
+<blockquote class="question">Which single survey would most improve demand forecasts for your corridor — and what would it cost to run?</blockquote>
+<ul><li>Think: counts, intercept interviews, GPS tracking, smart-card data.</li></ul><p class="page">20 / 24</p>
+</section>
+<div class="explain">This question asks you to choose the one survey that would most improve forecasts for your corridor. The options include traffic counts, intercept interviews with travellers, GPS tracking and smart-card data. Weigh what each would tell you against what it would cost. Your answer feeds the assumption register in P5.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s21" data-layout="takeaways">
+<h2>Key takeaways</h2>
+<ul><li>The four-step model compares alternatives in one assessment year; it does not decide</li><li>Mode choice responds to time, price and convenience — policy changes all three</li><li>Simplified forecasts miss land-use change and induced demand</li><li>Tashkent has headline numbers but no open travel survey: label every assumption</li></ul>
+<p class="page">21 / 24</p>
+</section>
+<div class="explain">The four-step model compares alternatives in one assessment year, but it does not make the decision. Mode choice responds to time, price and convenience, and policy can change all three. Simple forecasts miss land-use change and induced demand. Tashkent has headline numbers but no open travel survey, so label every assumption you make.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s22" data-layout="bullets">
+<h2>Before LAB5 and P5</h2>
+<ul><li>Open LAB05_demand_scenarios_synthetic.xlsx and read the README and Inputs sheets</li><li>Read the required lecture notes on trip generation and distribution</li><li>Bring your Stage 1 counts or the corridor flows from Week 2</li></ul>
+<p class="page">22 / 24</p>
+</section>
+<div class="explain">Before the lab, open LAB05_demand_scenarios_synthetic.xlsx and read its README and Inputs sheets. The workbook is synthetic: it mixes sourced numbers with labelled teaching assumptions. Read the required lecture notes on trip generation and distribution in this week&#39;s reading list. Bring your Stage 1 counts or your corridor flows from Week 2, because P5 uses them to build your scenarios.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s23" data-layout="references">
+<h2>References</h2>
+<ul><li>TU Delft (2013). CIE4801 Transportation and Spatial Modelling. TU Delft OpenCourseWare. https://ocw.tudelft.nl/courses/transportation-and-spatial-modelling/</li><li>Ben-Akiva, M. (2008). 1.201J/11.545J Transportation Systems Analysis: Demand and Economics, Fall 2008. MIT OpenCourseWare. https://ocw.mit.edu/courses/1-201j-transportation-systems-analysis-demand-and-economics-fall-2008/</li><li>Salvucci, F. (2016). 1.252J/11.540J Urban Transportation Planning, Fall 2016. MIT OpenCourseWare. https://ocw.mit.edu/courses/1-252j-urban-transportation-planning-fall-2016/</li><li>Synthetic teaching dataset generated for this course (method and random seed in each workbook&#39;s README sheet).</li><li>van Wee, B., Annema, J. A., Banister, D., &amp; Pudāne, B. (Eds.) (2023). The Transport System and Transport Policy: An Introduction (2nd ed.). Edward Elgar. https://rstrail.nl/the-transport-system-and-transport-policy-an-introduction/</li><li>Wilson, N., Sánchez-Martínez, G., &amp; Nassir, N. (2017). 1.258J/11.541J Public Transportation Systems, Spring 2017. MIT OpenCourseWare. https://ocw.mit.edu/courses/1-258j-public-transportation-systems-spring-2017/</li><li>Normukhammadov, A. (2026). Pedalling Towards Sustainability: Developing an Integrated Bicycle Network for Enhanced Urban Mobility in Tashkent City (PhD thesis draft; supervisor J. I. Sodikov). Tashkent State Transport University.</li><li>International Transport Forum (2023). Decarbonising Pathways for Urban Mobility in Uzbekistan (Tashkent) — methodology report and scenario model. OECD/ITF. https://www.itf-oecd.org/decarbonising-pathways-urban-mobility-uzbekistan</li><li>Sodikov, J. I., et al. (2026). A review of factors influencing car owners&#39; shift to public transport in Tashkent. Inzhener. https://engineer.tstu.uz</li><li>Pulatova, Z. S. (2024). Walkability assessment of Tashkent city districts (PhD dissertation, in Uzbek; supervisor J. I. Sodikov). Tashkent State Transport University.</li></ul>
+<p class="page">23 / 24</p>
+</section>
+</div>
+<div class="unit" data-unit>
+<section class="slide slide-title" id="s24" data-layout="licence">
+<p class="muted">© 2026 TSTU, J. Sodikov. CC BY-NC-SA 4.0. Adapts openly licensed material (CC BY-NC-SA 4.0) listed in the references.</p>
+<p class="page">24 / 24</p>
+</section>
+</div>
+<nav class="controls" aria-label="Slides"><button type="button" id="prev">&larr; Previous</button><span id="pos"></span><button type="button" id="next">Next &rarr;</button></nav>
+</div>
+<p class="meta"><a href="files/LEC09.pptx" download>Download slides (.pptx)</a></p>
+<footer>CC BY-NC-SA 4.0 · TSTU</footer>
+</main>
+<script src="../static/slides.js" defer></script></body>
+</html>

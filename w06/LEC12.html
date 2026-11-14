@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LEC12 · Service quality and street priority · Urban Transport Systems Planning and Design</title>
+<link rel="stylesheet" href="../static/site.css">
+</head>
+<body>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Show menu">
+<header class="topbar">
+<label for="nav-toggle" class="nav-button">Menu</label>
+<a class="brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+</header>
+<nav class="side" aria-label="Course">
+<a class="brand side-brand" href="../index.html">Urban Transport Systems Planning and Design</a>
+<h2>Weeks</h2>
+<ul>
+<li><a href="../w01/index.html">Week 1 · Planning transport systems around objectives</a></li>
+<li><a href="../w02/index.html">Week 2 · Data and baseline analysis</a></li>
+<li><a href="../w03/index.html">Week 3 · Land use and transport justice</a></li>
+<li><a href="../w04/index.html">Week 4 · Multimodal network design</a></li>
+<li><a href="../w05/index.html">Week 5 · Demand forecasting and policy impacts</a></li>
+<li><a href="../w06/index.html" class="current" aria-current="page">Week 6 · Public transport service design</a></li>
+<li><a href="../w07/index.html">Week 7 · Interchanges and allocation of street space</a></li>
+<li><a href="../w08/index.html">Week 8 · Safe walking and cycling networks</a></li>
+<li><a href="../w09/index.html">Week 9 · Infrastructure management and climate adaptation</a></li>
+<li><a href="../w10/index.html">Week 10 · Traffic operations management</a></li>
+<li><span class="locked">Week 11 · Parking and urban logistics <small>opens 2026-11-16</small></span></li>
+<li><span class="locked">Week 12 · Governance and public participation <small>opens 2026-11-23</small></span></li>
+<li><span class="locked">Week 13 · Decarbonisation and emerging mobility services <small>opens 2026-11-30</small></span></li>
+<li><span class="locked">Week 14 · Appraisal and implementation <small>opens 2026-12-07</small></span></li>
+<li><span class="locked">Week 15 · Monitoring and evidence-based recommendations <small>opens 2026-12-14</small></span></li>
+</ul>
+<h2>Course documents</h2>
+<ul>
+<li><a href="../course/Course_project_brief.html">Course project brief</a></li>
+<li><a href="../course/Analytical_paper_brief.html">Analytical paper brief</a></li>
+<li><a href="../course/Marking_guides.html">Marking guides</a></li>
+</ul>
+</nav>
+<main>
+<header class="masthead"><p class="kicker"><a href="index.html#lectures">Week 6</a> · Lecture 2</p><h1>LEC12 · Service quality and street priority</h1></header>
+<div class="viewer" id="viewer">
+<div class="unit" data-unit>
+<section class="slide slide-title" id="s1" data-layout="title">
+<p class="kicker">Week 6 · Lecture 2</p>
+<h2>Service quality and street priority</h2>
+<p class="muted">LEC12 · Urban Transport Systems Planning and Design · TSTU · Prof. J. Sodikov</p>
+<p class="page">1 / 24</p>
+</section>
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s2" data-layout="section">
+<h2>What you will be able to do after today</h2>
+<ul><li>Calculate expected waiting time from headway and regularity</li><li>Judge stop spacing against access and speed</li><li>Express corridor capacity in passengers, not vehicles</li><li>Choose between bus lanes, junction priority and BRT for a corridor</li></ul><p class="page">2 / 24</p>
+</section>
+<div class="explain">This lecture is about the quality of a bus service and how street priority improves it. You will calculate the expected waiting time from the headway and the regularity of service. You will judge stop spacing by weighing walking access against speed, and express capacity in passengers, not vehicles. Finally, you will choose between bus lanes, junction priority and bus rapid transit (BRT) for a corridor.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s3" data-layout="bullets">
+<h2>What passengers experience</h2>
+<ul><li>Walk to the stop, wait, ride, transfer, walk to the destination</li><li>Waiting and walking feel longer than riding — they weigh more in mode choice (Week 5)</li><li>Reliability: the extra time people must allow because buses are irregular</li><li>Crowding, heat, safety and information shape the wait</li><li>Quality of service is a passenger measure, not an operator one (TCQSM)</li></ul>
+<p class="page">3 / 24</p>
+</section>
+<div class="explain">A public transport trip has several parts: walking to the stop, waiting, riding, perhaps transferring, and walking to the destination. Waiting and walking feel longer than riding, so they weigh more in mode choice, as Week 5 showed. Reliability is the extra time people must allow because buses are irregular. Crowding, heat, safety and information also shape how a wait feels. The Transit Capacity and Quality of Service Manual (TCQSM) measures quality from the passenger&#39;s side, not the operator&#39;s.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s4" data-layout="bullets">
+<h2>Waiting time and regularity</h2>
+<ul><li>Passengers arriving at random wait on average half a headway: h/2</li><li>Irregular headways make it worse: E[W] = h/2 × (1 + CV²)</li><li>CV is the coefficient of variation of headways at the stop</li><li>Bunching: a late bus picks up more passengers and gets later still</li><li>With long headways people time their arrival — then reliability matters most</li></ul>
+<p class="page">4 / 24</p>
+</section>
+<div class="explain">If passengers arrive at random, they wait on average half a headway, h/2. Irregular headways make the average wait longer: E[W] = h/2 × (1 + CV²). CV, the coefficient of variation, is the standard deviation of the headways divided by their mean, so a higher CV means less regular service. Bunching makes this worse, because a late bus picks up more passengers and falls further behind. When headways are long, people time their arrival to the timetable, and then reliability matters most.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s5" data-layout="figure">
+<h2>Expected wait against headway</h2>
+<img src="../assets/w06_wait_curve.png" alt="Expected wait against headway" loading="lazy">
+<p class="caption">Same headway, longer waits when service is irregular.</p><p class="page">5 / 24</p>
+</section>
+<div class="explain">The chart plots the expected wait against the headway for three levels of regularity. The lowest line is perfectly regular service, the middle line is service with priority, and the top line is mixed traffic. For the same headway, the more irregular service gives a longer wait. The regularity values are illustrative inputs from LAB6.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s6" data-layout="bullets">
+<h2>Making service reliable</h2>
+<ul><li>Measure it: headway regularity, excess waiting time, on-time performance</li><li>Remove the causes: mixed traffic, long variable dwells, junction delay</li><li>Control: holding at timing points, headway-based dispatching</li><li>Protect: bus lanes and junction priority reduce variability as well as delay</li></ul>
+<p class="page">6 / 24</p>
+</section>
+<div class="explain">First measure reliability, with headway regularity, excess waiting time (the extra wait caused by irregular service) and on-time performance. Then remove its causes: mixed traffic, long and variable stop times, and delay at junctions. Operators can also control service by holding buses at timing points or by dispatching them by headway. Bus lanes and junction priority protect the service, because they reduce the variation in travel time as well as the delay.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s7" data-layout="bullets">
+<h2>Stop spacing: access against speed</h2>
+<ul><li>Closer stops: shorter walks, but every stop costs dwell, braking and acceleration</li><li>Wider spacing: faster buses and more frequency from the same fleet</li><li>Optimum depends on trip length, walking speed and how passengers value time</li><li>Same s/4 logic as link spacing in Week 4</li><li>Consolidate stops together with better crossings, not instead of them</li></ul>
+<p class="page">7 / 24</p>
+</section>
+<div class="explain">Closer stops mean shorter walks, but every stop costs time for dwell (the time a bus stands at the stop), braking and accelerating. Wider spacing makes buses faster, so the same fleet can run more often. The best spacing depends on trip length, walking speed and how passengers value their time. The reasoning is the same as for link spacing in Week 4. If you remove stops, improve the crossings at the same time, not instead.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s8" data-layout="bullets">
+<h2>Worked example: removing stops</h2>
+<ul><li>A route has 30 stops; each costs 30 s of dwell, braking and acceleration</li><li>Removing 6 lightly used stops saves 3 min per direction</li><li>On a 120 min cycle that is 6 min: at a 10 min headway, still 12 buses</li><li>Combine with priority and the saving can release a bus</li><li>Cost: some passengers walk up to one extra stop spacing</li></ul>
+<p class="page">8 / 24</p>
+</section>
+<div class="explain">Each of the route&#39;s 30 stops costs 30 s of dwell, braking and acceleration. Removing 6 lightly used stops saves 3 minutes in each direction, which is 6 minutes on a 120-minute cycle. At a 10-minute headway the route still needs 12 buses, because the saving is too small to remove a whole bus. Combined with priority, the saving can become large enough to release a bus. The cost is that some passengers walk up to one extra stop spacing.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s9" data-layout="figure">
+<h2>Tashkent&#39;s stop spacing</h2>
+<img src="../assets/w06_stop_spacing.png" alt="Tashkent&#39;s stop spacing" loading="lazy">
+<p class="caption">3,675 stop-to-stop segments; median 458 m.</p><p class="page">9 / 24</p>
+</section>
+<div class="explain">The chart shows the straight-line distance from each mapped stop to the next on Tashkent&#39;s bus routes. Across 3,675 stop-to-stop segments, the median spacing is 458 m. Gaps longer than 3 km were left out, because they come from stops missing in the map.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s10" data-layout="bullets">
+<h2>Reading the spacing — and a local catchment rule</h2>
+<ul><li>Median 458 m between stops; 14% under 300 m</li><li>SNiP norm quoted by Pulatova: 500 m (600 m in low-density areas) to the nearest stop</li><li>Russian catchment formula: R = 55.8 or 67.0 × (10 − 0.125 × headway)</li><li>A 10-minute headway gives a minimum catchment of 488 m: frequency extends walking catchments</li></ul>
+<p class="page">10 / 24</p>
+</section>
+<div class="explain">The median spacing is 458 m, and 14% of segments are shorter than 300 m. The SNiP norm quoted by Pulatova says the walk to the nearest stop should be at most 500 m, or 600 m in low-density areas. A Russian formula links the catchment radius R to the headway: R = 55.8 or 67.0 × (10 − 0.125 × headway). A 10-minute headway gives a minimum catchment of 488 m, so a more frequent service draws people from further away.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s11" data-layout="bullets">
+<h2>Capacity measured in passengers</h2>
+<ul><li>Line capacity = buses per hour × places per bus × load factor</li><li>Corridor capacity is limited by stops and junctions, not by the lane itself</li><li>Stop capacity rises with more loading bays, level boarding and off-board fares</li><li>Compare person throughput, not vehicles: one bus lane against one car lane</li><li>TCQSM gives the procedures for bus stop and lane capacity</li></ul>
+<p class="page">11 / 24</p>
+</section>
+<div class="explain">Line capacity is buses per hour times places per bus times the load factor. On a corridor, the limit is set by stops and junctions, not by the lane itself. Stop capacity rises with more loading bays, level boarding and fares paid before boarding. Compare corridors by person throughput, the number of people moved, not by vehicles. The TCQSM gives the procedures for bus stop and bus lane capacity.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s12" data-layout="bullets">
+<h2>Worked example: what a lane carries</h2>
+<ul><li>Bus lane: 40 buses per hour × 80 places × 0.85 = 2,720 passengers per hour</li><li>Car lane: 800 cars per hour × 1.3 persons = 1,040 persons per hour</li><li>The bus lane needs only 40 vehicles to move more people</li><li>Use your own counts for the car lane (Week 2) and your corridor&#39;s buses</li></ul>
+<p class="page">12 / 24</p>
+</section>
+<div class="explain">A bus lane with 40 buses per hour, 80 places per bus and a load factor of 0.85 carries 2,720 passengers per hour. A car lane with 800 cars per hour at 1.3 persons per car moves 1,040 persons per hour. So the bus lane moves more people with 40 vehicles than the car lane does with 800. The numbers are illustrative, so use your own counts from Week 2 and the buses on your corridor.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s13" data-layout="bullets">
+<h2>Street priority: dedicated lanes</h2>
+<ul><li>Kerbside lanes: cheap and quick, but conflict with parking, loading and turning</li><li>Median lanes: protected and faster, but need stations in the middle of the road</li><li>Enforcement decides whether a lane works</li><li>Corridor strategies: express, short-turn and zonal services on top</li></ul>
+<p class="page">13 / 24</p>
+</section>
+<div class="explain">Kerbside bus lanes are cheap and quick to build, but they conflict with parking, loading and turning traffic. Median lanes, in the middle of the road, are protected and faster, but they need stations in the middle of the road too. Whether a lane works depends on enforcement. On top of a lane, corridor strategies add express, short-turn and zonal services.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s14" data-layout="bullets">
+<h2>Junction priority</h2>
+<ul><li>Green extension and early green for an approaching bus</li><li>Queue jumps and bus-only signal phases</li><li>Conditional priority: only for late buses, to improve regularity</li><li>Needs a signal inventory and controllers that can talk to buses</li><li>TSTU&#39;s GIS inventory of Tashkent&#39;s traffic signals is a starting point</li></ul>
+<p class="page">14 / 24</p>
+</section>
+<div class="explain">Junction priority helps buses through traffic signals. A signal can extend the green or give an early green to an approaching bus, and queue jumps or bus-only phases let buses go first. Conditional priority is given to late buses, which improves regularity. It needs an inventory of signals and controllers that can communicate with buses, and TSTU&#39;s GIS inventory of Tashkent&#39;s traffic signals is a starting point.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s15" data-layout="table">
+<h2>Conventional bus, bus with priority or BRT?</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Option</th><th>Choose it when</th><th>Limits</th></tr></thead>
+<tbody>
+<tr><td>Conventional bus</td><td>Moderate demand, narrow streets, coverage role</td><td>Speed and regularity follow traffic</td></tr>
+<tr><td>Bus with lanes and junction priority</td><td>Overlapping routes, recurring congestion</td><td>Needs enforcement and kerb management</td></tr>
+<tr><td>BRT</td><td>High trunk demand, width for median stations</td><td>Higher cost; works as a network, not a line</td></tr>
+</tbody></table></div>
+<p class="page">15 / 24</p>
+</section>
+<div class="explain">The table helps you match the option to the corridor. A conventional bus suits moderate demand, narrow streets and a coverage role, but its speed and regularity follow general traffic. A bus with lanes and junction priority suits overlapping routes and recurring congestion, but it needs enforcement and kerb management. BRT suits high demand on a trunk where the street is wide enough for median stations, but it costs more and works as a network, not as a single line.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s16" data-layout="section">
+<h2>Tashkent: what priority would buy</h2>
+<ul><li>Real route lengths and stops, synthetic loads — LAB6</li></ul><p class="page">16 / 24</p>
+</section>
+<div class="explain">The last part of the lecture estimates what priority would buy in Tashkent. LAB6 uses real route lengths and stops from OSM, but the passenger loads are synthetic.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s17" data-layout="bullets">
+<h2>Route 8 with priority</h2>
+<ul><li>Bus lanes on half the route (25 km/h) and 22 s per stop with level boarding</li><li>Result: priority cycle 142.1 min; fleet 34; or 3.55 min headway with 40 buses</li><li>Either save buses or keep them and run more often</li><li>The second option also cuts waiting time and crowding</li></ul>
+<p class="page">17 / 24</p>
+</section>
+<div class="explain">In the priority scenario, route 8 gets bus lanes on half its length, where buses run at 25 km/h, and level boarding cuts the time per stop to 22 s. The cycle time falls to 142.1 minutes. The operator can then keep the same headway with 34 buses, or keep all 40 buses and run every 3.55 minutes. The second choice also cuts waiting time and crowding.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s18" data-layout="figure">
+<h2>Priority across the network (illustrative)</h2>
+<img src="../assets/w06_priority_results.png" alt="Priority across the network (illustrative)" loading="lazy">
+<p class="caption">Sixty route numbers with real OSM lengths and stops; synthetic loads and parameters.</p><p class="page">18 / 24</p>
+</section>
+<div class="explain">The charts apply the same priority scenario to sixty route numbers, with real OSM lengths and stops but synthetic loads and parameters. One chart compares the fleet needed for the same headways with and without priority. The other compares the mean expected wait when today&#39;s fleet is kept. Both give the same message: priority can save buses or shorten waits.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s19" data-layout="bullets">
+<h2>Reading the network result</h2>
+<ul><li>Fleet for the same headways: 1,549 → 1,294 buses</li><li>Mean expected wait with today&#39;s fleet: 5.82 → 4.01 min</li><li>Both are scenario results from assumed speeds and loads — not forecasts</li><li>The direction is robust: priority turns speed into frequency</li><li>Compare with the concept&#39;s +17% bus-speed target</li></ul>
+<p class="page">19 / 24</p>
+</section>
+<div class="explain">Across the network, priority cuts the fleet needed for the same headways from 1,549 to 1,294 buses. If today&#39;s fleet is kept, the mean expected wait falls from 5.82 to 4.01 minutes. Both are scenario results from assumed speeds and loads, not forecasts. But the direction of the result is robust: priority turns speed into frequency. Compare this with the concept&#39;s target of raising bus speed by 17%.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s20" data-layout="bullets">
+<h2>Waiting in a hot city</h2>
+<ul><li>Sodikov et al. walking survey: stepping from sunlit pavement into the nearest shade lowers surface temperature by a median 19.5 °C</li><li>78.5 km of the first-phase shade network lies close to a transit stop</li><li>Shade, seating and real-time information make waits shorter in perception</li><li>Stop design is part of service quality, not only street furniture</li></ul>
+<p class="page">20 / 24</p>
+</section>
+<div class="explain">Waiting is harder in Tashkent&#39;s heat. In a walking survey by Sodikov and colleagues, stepping from sunlit pavement into the nearest shade lowered the surface temperature by a median of 19.5 °C. In the first phase of the shade network in the same study, 78.5 km lies close to a transit stop. Shade, seating and real-time information make waits feel shorter, so stop design is part of service quality.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s21" data-layout="question">
+<h2>Discussion</h2>
+<blockquote class="question">Your corridor gets either a bus lane or junction priority this year, not both. Which one, and why?</blockquote>
+<ul><li>Use cycle time, fleet and waiting time in your answer.</li></ul><p class="page">21 / 24</p>
+</section>
+<div class="explain">This year your corridor can have either a bus lane or junction priority, but not both. Choose one and support your choice with numbers for cycle time, fleet and waiting time. Think about where buses on your corridor lose most time: between stops or at junctions.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s22" data-layout="takeaways">
+<h2>Key takeaways</h2>
+<ul><li>Waiting time grows with headway and with irregularity</li><li>Stop spacing trades walking against speed and fleet</li><li>Capacity is counted in passengers; stops and junctions set the limit</li><li>Priority converts saved minutes into frequency or saved buses</li></ul>
+<p class="page">22 / 24</p>
+</section>
+<div class="explain">Waiting time grows with the headway and with irregular service. Stop spacing trades walking distance against speed and fleet size. Capacity is counted in passengers, and stops and junctions set its limit. Priority turns the minutes it saves into higher frequency or fewer buses.</div>
+
+</div>
+<div class="unit" data-unit>
+<section class="slide" id="s23" data-layout="references">
+<h2>References</h2>
+<ul><li>Wilson, N., Sánchez-Martínez, G., &amp; Nassir, N. (2017). 1.258J/11.541J Public Transportation Systems, Spring 2017. MIT OpenCourseWare. https://ocw.mit.edu/courses/1-258j-public-transportation-systems-spring-2017/</li><li>Kittelson &amp; Associates et al. (2013). Transit Capacity and Quality of Service Manual (3rd ed.), TCRP Report 165. Transportation Research Board. https://nap.nationalacademies.org/read/24766</li><li>Ben-Akiva, M. (2008). 1.201J/11.545J Transportation Systems Analysis: Demand and Economics, Fall 2008. MIT OpenCourseWare. https://ocw.mit.edu/courses/1-201j-transportation-systems-analysis-demand-and-economics-fall-2008/</li><li>Pulatova, Z. S. (2024). Walkability assessment of Tashkent city districts (PhD dissertation, in Uzbek; supervisor J. I. Sodikov). Tashkent State Transport University.</li><li>van Nes, R. Designing public transport networks / Public transport service networks: design of urban and regional networks. TU Delft research portal. https://research.tudelft.nl/en/publications/designing-public-transport-networks/</li><li>OpenStreetMap contributors (2026). Uzbekistan extract, Geofabrik GmbH (download.geofabrik.de). https://download.geofabrik.de/asia/uzbekistan.html</li><li>Global Designing Cities Initiative &amp; NACTO (2016). Global Street Design Guide. Island Press. https://globaldesigningcities.org/publication/global-street-design-guide/</li><li>Sodikov, J. I., et al. (2016). GIS inventory of traffic signals on Tashkent streets (in Russian). Transport Systems of Siberia.</li><li>Urbanik, T., et al. (2015). Signal Timing Manual (2nd ed.), NCHRP Report 812. Transportation Research Board. https://www.nap.edu/read/22097/chapter/2</li><li>ITDP — Institute for Transportation and Development Policy. The BRT Planning Guide (4th ed.). New York: ITDP. https://brtguide.itdp.org/</li><li>Synthetic teaching dataset generated for this course (method and random seed in each workbook&#39;s README sheet).</li><li>Sodikov, J. I., et al. (2026). Urban heat actions of 100 global cities: Tashkent, Uzbekistan (book chapter manuscript).</li></ul>
+<p class="page">23 / 24</p>
+</section>
+</div>
+<div class="unit" data-unit>
+<section class="slide slide-title" id="s24" data-layout="licence">
+<p class="muted">© 2026 TSTU, J. Sodikov. CC BY-NC-SA 4.0. Adapts openly licensed material (CC BY-NC-SA 4.0) listed in the references.</p>
+<p class="page">24 / 24</p>
+</section>
+</div>
+<nav class="controls" aria-label="Slides"><button type="button" id="prev">&larr; Previous</button><span id="pos"></span><button type="button" id="next">Next &rarr;</button></nav>
+</div>
+<p class="meta"><a href="files/LEC12.pptx" download>Download slides (.pptx)</a></p>
+<footer>CC BY-NC-SA 4.0 · TSTU</footer>
+</main>
+<script src="../static/slides.js" defer></script></body>
+</html>
